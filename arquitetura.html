@@ -1,0 +1,191 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>SemanticSUS - Arquitetura</title>
+
+    <!-- Bootstrap -->
+    <link href="css/bootstrap.min.css" rel="stylesheet">
+	<link rel="stylesheet" href="css/animate.css">
+	<link rel="stylesheet" href="css/font-awesome.min.css">
+	<link rel="stylesheet" href="css/jquery.bxslider.css">
+	<link rel="stylesheet" type="text/css" href="css/normalize.css" />
+	<link rel="stylesheet" type="text/css" href="css/demo.css" />
+	<link rel="stylesheet" type="text/css" href="css/set1.css" />
+	<link href="css/overwrite.css" rel="stylesheet">
+	<link href="css/style.css" rel="stylesheet">
+    <!-- HTML5 shim and Respond.js for IE8 support of HTML5 elements and media queries -->
+    <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
+    <!--[if lt IE 9]>
+      <script src="https://oss.maxcdn.com/html5shiv/3.7.2/html5shiv.min.js"></script>
+      <script src="https://oss.maxcdn.com/respond/1.4.2/respond.min.js"></script>
+    <![endif]-->
+  </head>
+  <body>
+	<nav class="navbar navbar-default navbar-fixed-top" role="navigation">
+		<div class="container">
+			<!-- Brand and toggle get grouped for better mobile display -->
+			<div class="navbar-header">
+				<button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target=".navbar-collapse.collapse">
+					<span class="sr-only">Toggle navigation</span>
+					<span class="icon-bar"></span>
+					<span class="icon-bar"></span>
+					<span class="icon-bar"></span>
+				</button>
+				<a class="navbar-brand" href="index.html"><span><i>SemanticSUS</i></span></a>
+			</div>
+			<div class="navbar-collapse collapse">							
+				<div class="menu">
+					<ul class="nav nav-tabs" role="tablist">
+						<li role="presentation" ><a href="index.html">Home</a></li>
+						<li role="presentation" class="active"><a href="#">Arquitetura</a></li>
+						<li role="presentation" ><a href="is.html">Integração semântica</a></li>
+						<li role="presentation" ><a href="id.html">Integração de dados</a></li>
+						<!--<li role="presentation" ><a href="#galeria">Galeria</a></li>-->
+					</ul>
+				</div>
+			</div>			
+		</div>
+	</nav>
+	
+
+
+
+
+
+
+
+		<div class="container">
+			<div class="row">
+				<div >
+					<div class="text-center espaco">
+						<h2><i>Arquitetura do Portal Semântico</i></h2>
+			            <p class="textForRead">
+			                Um portal pode ser definido como uma aplicação web que age como uma porta de acesso entre usuários e uma variedade de diferentes serviços de alto nível.
+			                Este tipo de aplicação tem como principal finalidade prover um ambiente capaz de coletar e providenciar informações relevantes para um determinado domínio.
+			                Este ambiente é, em geral, composto  por um conjunto de ferramentas que permitem que o usuário seja capaz de, e.g., manipular dados apresentados pelo portal para extrair novas informações.
+
+			                <br><br>
+
+			                Estendendo o conceito de portal, tem-se a definição de <b>portal semântico</b> ou apenas SWP (<i>Semantic Web Portal</i>).
+			                Um SWP é um portal que tem como principal característica a adição de semântica em seus conteúdos e serviços, de tal forma que estes possam ser vistos como aplicações da web semântica para usuários de pequenas comunidades.
+
+			                <br><br>
+					</div>
+					<hr>
+				</div>
+
+
+
+				<div class="content">
+					<div class="grid">
+						<figure class="effect-zoe">
+							<img src="img/arquitetura_portal.png" alt="arquitetura do portal"/>
+							<figcaption>
+								<h2>Arquitetura <span><i>SemanticSUS</i></span></h2>
+								
+								<p class="description">Arquitetura do portal <i>SemanticSus</i>.</p>
+							</figcaption>			
+						</figure>
+					</div>
+				</div>
+
+
+
+				<div id="descricaoArquitetura">
+					<h4>Cada uma das camadas tem sua descrição apresentada a seguir:</h4>
+					<ul>
+						<li><b>Fontes de dados:</b> Nesta camada estão definidas todas as fontes de dados utilizadas pelo portal semântico. As fontes de dados suportadas pelo portal semântico podem ser de diferentes tipos e proveniência, desde bases relacionais e grafos RDF até dados provenientes de sensores e dispositivos de IoT (<i>Internet Of Things</i>);
+						<li>
+							<b>Extração e anotação de dados:</b> Nesta camada estão os componentes que irão realizar o acesso às fontes de dados disponíveis na camada mais inferior, os chamados "extratores". Além desses componentes, esta camada também provê um conjunto de metadados sobre cada uma das fontes. Esses metadados são informações que vão desde o formato da fonte até comentários sobre os significados de elementos do esquema utilizado pela fonte;
+						</li>
+						<li>
+							<b>Ontologia de Domínio:</b>
+							A ontologia atua como uma camada de abstração. Ela provê uma visão integrada e semântica das múltiplas fontes de dados. Desta forma, usuários e aplicações  podem acessar, de forma transparente, às várias fontes heterogenias. Além disso, ela também é responsável pela adição de semântica aos dados;
+						</li>
+						<li>
+							<b>Integração Semântica:</b>
+							Esta camada é responsável por especificar o processo de resolução da heterogeneidade dos dados, incluindo a heterogeneidade semântica. Ela também é responsável pelo armazenamento e gerenciamento do resultado da integração semântica. Esse resultado é representado por um conjunto de especificações. Cada uma dessas especificações está associado a um passo necessário para a construção da integração semântica.
+						</li>
+						<li>
+							<b>Integração de Dados:</b> O resultado obtido na camada de integração semântica é utilizado na construção de uma visão homogênea sobre os dados. Essa visão pode utilizar um enfoque virtual (Mediador Semântico) ou um enfoque materializado (Mashup de Dados) para prover acesso aos dados; 
+						</li>
+						<li>
+							<b>Aplicação:</b> Na camada mais externa estão as aplicações que fazem uso das outras camadas para disponibilizar algum serviço para o usuário, como a geração de visualizações sobre os dados ou a aplicação de técnicas de mineração. 
+						</li>
+					</ul>
+				</div>
+
+			</div>
+		</div>
+	</div>
+		
+
+
+
+
+
+
+
+
+	
+	
+	<footer>
+		<div id="contato" class="inner-footer">
+			<div class="container">
+				<div class="row">
+					<div class="col-md-4 f-about">
+						<a href="index.html"><h1><span>Semantic</span>SUS</h1></a>
+						
+
+					</div>
+					<div class="col-md-4 f-contact">
+						<h3 class="widgetheading">Contato</h3>
+						<a href="#"><p><i class="fa fa-envelope"></i> semanticSUS@gmail.com</p></a>
+						
+					</div>
+				</div>
+			</div>
+		</div>
+		
+		
+		<div class="last-div">
+			<div class="container">
+				<div class="row">
+					<div class="copyright">
+						© 2014 eNno Multi-purpose theme | <a target="_blank" href="http://bootstraptaste.com">Bootstraptaste</a>
+					</div>	
+                    <!-- 
+                        All links in the footer should remain intact. 
+                        Licenseing information is available at: http://bootstraptaste.com/license/
+                        You can buy this theme without footer links online at: http://bootstraptaste.com/buy/?theme=eNno
+                    -->				
+				</div>
+			</div>
+			<div class="container">
+				<div class="row">
+					
+				</div>
+			</div>
+			
+			<a href="" class="scrollup"><i class="fa fa-chevron-up"></i></a>	
+				
+			
+		</div>	
+	</footer>
+	
+    <!-- jQuery (necessary for Bootstrap's JavaScript plugins) -->
+    <script src="js/jquery-2.1.1.min.js"></script>
+    <!-- Include all compiled plugins (below), or include individual files as needed -->
+    <script src="js/bootstrap.min.js"></script>
+	<script src="js/wow.min.js"></script>
+	<script src="js/jquery.easing.1.3.js"></script>
+	<script src="js/jquery.isotope.min.js"></script>
+	<script src="js/jquery.bxslider.min.js"></script>
+	<script type="text/javascript" src="js/fliplightbox.min.js"></script>
+	<script src="js/functions.js"></script>	
+	<script type="text/javascript">$('.portfolio').flipLightBox()</script>
+  </body>
+</html>

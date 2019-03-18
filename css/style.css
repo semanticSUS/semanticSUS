@@ -120,8 +120,8 @@ a.navbar-brand span {
 	margin-top:30px;
 }
 .text-center p {
-	color:#8a8d94;
-	font-size:15px;
+	color:black;
+	font-size:18px;
 	
 }
 
@@ -250,7 +250,7 @@ a.navbar-brand span {
 
 .blog h3,p {
 	color:#000;
-	padding:15px;
+	
 }
 .blog .ficon {
 	text-align:center;
@@ -580,4 +580,67 @@ a.scrollup:hover{
 	opacity:1;
 	background-color:#36CBD4;
 	color:#fff;;	
+}
+
+.subtitulo{
+  color: #8a8d94
+}
+
+.espaco{
+  margin-top: 60px
+}
+
+.sectionOfText {
+  font-family: Georgia;
+  font-size: 22px;
+  border-bottom: 1px solid gray;
+  margin-top: 35px;
+}
+
+.subSectionOfText {
+  font-family: Georgia;
+  font-size: 18px;
+  margin-top: 45px;
+
+}
+
+.textForRead {
+  
+  line-height: 28px;
+   margin:0 0 15px 0;
+}
+
+.customLoader {
+  position: absolute;
+  left: 50%;
+  z-index: 1;
+  width: 150px;
+  height: 150px;
+
+  border: 16px solid #f3f3f3;
+  border-radius: 50%;
+  border-top: 16px solid #3498db;
+  width: 120px;
+  height: 120px;
+  -webkit-animation: spin 2s linear infinite;
+  animation: spin 2s linear infinite;
+}
+
+@keyframes spin {
+  0% { transform: rotate(0deg); }
+  100% { transform: rotate(360deg); }
+}
+
+body {
+  /* Margin bottom by footer height */
+  margin-bottom: 85px;
+}
+
+.page-content {
+  margin-bottom: 20px
+}
+
+.left{
+  text-align: left;
+
 }
