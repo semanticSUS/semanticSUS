@@ -11,81 +11,135 @@
 </head>
 <body>
 	<div style="background-color: red">
-	    <nav class="navbar navbar-expand navbar-dark bg-dark">
-	        <a class="navbar-brand" href="#">SemanticSUS </a>
+       <nav class="navbar navbar-expand navbar-dark bg-dark">
+           <a class="navbar-brand" href="#">SemanticSUS </a>
 
-	        <div class="collapse navbar-collapse">
-	            <ul class="navbar-nav mr-auto">
-	                <li class="nav-item navoption"><a class="nav-link" href="index.html">Inicio</a></li>
-	                <li class="nav-item navoption"><a class="nav-link" href="visao_semantica.html">Visão Semântica</a></li>
-	                <li class="nav-item navoption"><a class="nav-link" href="edit_vis.html">Editar VS</a></li>
-	                <li class="nav-item navoption"><a class="nav-link" href="mediador_semantico.html">Mediador Semântico</a></li>
-	                <li class="nav-item navoption"><a class="nav-link" href="mashup_builder.html">Mashup Builder</a></li>
-	                <li class="nav-item navoption"><a class="nav-link" href="mashup_especializado.html">Mashups Especializados</a></li>
-	            </ul>
-	        </div>
-	    </nav>
-	</div>
-
-
-	<div class="container" >
-        <div id="page-content">
-            <div class="jumbotron mt-3">
-                <h1>SemanticSUS</h1>
-                <p class="lead">Um Portal Semântico baseada em Ontologias e Dados Interligados para Acesso, Integração e Visualização de Dados do SUS</p>
-            </div>
-            <br>
+           <div class="collapse navbar-collapse">
+               <ul class="navbar-nav mr-auto">
+                   <li class="nav-item navoption"><a class="nav-link" href="index.html">Inicio</a></li>
+                   <li class="nav-item navoption"><a class="nav-link" href="visao_semantica.html">Visão Semântica</a></li>
+                   <li class="nav-item navoption"><a class="nav-link" href="edit_vis.html">Editar VS</a></li>
+                   <li class="nav-item navoption"><a class="nav-link" href="mediador_semantico.html">Mediador Semântico</a></li>
+                   <li class="nav-item navoption"><a class="nav-link" href="mashup_builder.html">Mashup Builder</a></li>
+                   <li class="nav-item navoption"><a class="nav-link" href="mashup_especializado.html">Mashups Especializados</a></li>
+               </ul>
+           </div>
+       </nav>
+   </div>
 
 
-        	<p class="sectionOfText">
-                <a name="lista_conteudo" id="lista_conteudo"></a>
-                Conteúdo
-            </p>
-            <p class="textForRead">
-                <ol>
-                	<li><a class="conteudo_link" href="#sobre_semanticsus"> Sobre SemanticSUS </a></li>
-                	<li><a class="conteudo_link" href="#arquitetura"> Arquitetura do SemanticSUS </a></li>
-                	
-                </ol>
-            </p>
+   <div class="container" >
+    <div id="page-content">
+        <div class="jumbotron mt-3">
+            <h1>SemanticSUS</h1>
+            <p class="lead">Um Portal Semântico baseada em Ontologias e Dados Interligados para Acesso, Integração e Visualização de Dados do SUS</p>
+        </div>
+        <br>
 
-            <p class="sectionOfText">
-                <a name="sobre_semanticsus" id="sobre_semanticsus"></a>
-                Sobre SemanticSUS
-            </p>
-            <p class="textForRead">
-                O <i>SemanticSUS</i>, um portal semântico para acesso, analise e visualização de grande quantidade de dados do Sistema Único de Saúde (SUS).
-                O Portal SemanticSUS é baseado em um enfoque que combina ontologias e Dados Interligados para enfrentar os desafios no desenvolvimento de aplicações onde existe a necessidade de integrar fontes de dados heterogêneas.
-                O SemanticSUS tem como principal objetivo oferecer uma camada ontológica, conectada semanticamente aos dados, e que permita o acesso integrado aos dados.
-                A plataforma disponibiliza também o serviço de integração semântica baseado na abordagem <i>pay-as-you-go</i>, o que garante flexibilidade e extensibilidade suficientes para que novas fontes de dados possam ser adicionadas ao portal.
-                Outra facilidade do portal é a ferramenta <i>Mashup Buider</i>, a qual permite a construção de Mashup de Dados de forma simples e automática.
-            </p>
-            <br>
+    <div id="menu_index">
+        <p class="sectionOfText">
+            <a name="lista_conteudo" id="lista_conteudo"></a>
+            Conteúdo
+        </p>
+        <p class="textForRead">
+            <ol>
+               <li><a class="conteudo_link" href="#sobre_semanticsus"> Sobre o SemanticSUS </a></li>
+               <li><a class="conteudo_link" href="#arquitetura"> Arquitetura do SemanticSUS </a></li>
+               <li><a class="conteudo_link" href="#is_semanticSUS"> Integração Semântica do SemanticSUS </a></li>
+               <li><a class="conteudo_link" href="#consultando_visao"> Consultando as fontes de dados através da Visão Semântica </a></li>
+               <li><a class="conteudo_link" href="#construindo_mashub"> Construindo Mashup de Dados Especializado </a></li>
+               <li><a class="conteudo_link" href="#ex_mashup"> Exemplos de Mashups Especializados </a></li>
+               <li><a class="conteudo_link" href="#referencia"> Referências </a></li>
+               <li><a class="conteudo_link" href="#agradecimentos"> Agradecimentos </a></li>
+           </ol>
+       </p>
+    </div>
 
-
-            <p class="sectionOfText">
-                <a name="arquitetura" id="arquitetura"></a>
-                Arquitetura do Portal Semântico</p>
-            <p class="textForRead">
-                Um portal pode ser definido como uma aplicação web que age como uma porta de acesso entre usuários e uma variedade de diferentes serviços de alto nível.
-                Este tipo de aplicação tem como principal finalidade prover um ambiente capaz de coletar e providenciar informações relevantes para um determinado domínio.
-                Este ambiente é, em geral, composto  por um conjunto de ferramentas que permitem que o usuário seja capaz de, e.g., manipular dados apresentados pelo portal para extrair novas informações.
-
-                <br><br>
-
-                Estendendo o conceito de portal, tem-se a definição de <b>portal semântico</b> ou apenas SWP (<i>Semantic Web Portal</i>).
-                Um SWP é um portal que tem como principal característica a adição de semântica em seus conteúdos e serviços, de tal forma que estes possam ser vistos como aplicações da web semântica para usuários de pequenas comunidades.
-
-                <br><br>
-
-                <img alt="Arquitetura Portal" class="rounded mx-auto d-block" src="img/arquitetura_portal.png">
-            </p>
-            <br>
-
-
-
+    <div id="sobre_semanticsus">
+        <p class="sectionOfText">1. Sobre o SemanticSUS </p>
+        <div class="textForRead">
+            O <i>SemanticSUS</i>, um portal semântico para acesso, analise e visualização de grande quantidade de dados do Sistema Único de Saúde (SUS).
+            O Portal SemanticSUS é baseado em um enfoque que combina ontologias e Dados Interligados para enfrentar os desafios no desenvolvimento de aplicações onde existe a necessidade de integrar fontes de dados heterogêneas.
+            O SemanticSUS tem como principal objetivo oferecer uma camada ontológica, conectada semanticamente aos dados, e que permita o acesso integrado aos dados.
+            A plataforma disponibiliza também o serviço de integração semântica baseado na abordagem <i>pay-as-you-go</i>, o que garante flexibilidade e extensibilidade suficientes para que novas fontes de dados possam ser adicionadas ao portal.
+            Outra facilidade do portal é a ferramenta <i>Mashup Buider</i>, a qual permite a construção de Mashup de Dados de forma simples e automática.
         </div>
     </div>
+
+    <br/>
+
+    <div id="arquitetura">
+        <p class="sectionOfText">2. Arquitetura do SemanticSUS </p>
+
+        <div class="textForRead">
+            Um portal pode ser definido como uma aplicação web que age como uma porta de acesso entre usuários e uma variedade de diferentes serviços de alto nível.
+            Este tipo de aplicação tem como principal finalidade prover um ambiente capaz de coletar e providenciar informações relevantes para um determinado domínio.
+            Este ambiente é, em geral, composto  por um conjunto de ferramentas que permitem que o usuário seja capaz de, e.g., manipular dados apresentados pelo portal para extrair novas informações.
+
+            <br><br>
+
+            Estendendo o conceito de portal, tem-se a definição de <b>portal semântico</b> ou apenas SWP (<i>Semantic Web Portal</i>).
+            Um SWP é um portal que tem como principal característica a adição de semântica em seus conteúdos e serviços, de tal forma que estes possam ser vistos como aplicações da web semântica para usuários de pequenas comunidades.
+
+            <br><br>
+
+            <img alt="Arquitetura Portal" class="rounded mx-auto d-block" src="img/arquitetura_portal.png">
+        </div>
+    </div>
+
+    <br/>
+
+    <div id="is_semanticSUS">
+        <p class="sectionOfText">3. Integração Semântica do SemanticSUS </p>
+        <div class="textForRead">
+            
+        </div>
+    </div>
+    <br/>
+
+
+    <div id="consultando_visao">
+        <p class="sectionOfText">4. Consultando as fontes de dados através da Visão Semântica </p>
+        <div class="textForRead">
+            
+        </div>
+    </div>
+    <br/>
+
+    <div id="construindo_mashub">
+        <p class="sectionOfText">5. Construindo Mashup de Dados Especializado </p>
+        <div class="textForRead">
+            
+        </div>
+    </div>
+    <br/>
+
+    <div id="ex_mashup">
+        <p class="sectionOfText">6. Exemplos de Mashups Especializados </p>
+        <div class="textForRead">
+            
+        </div>
+    </div>
+    <br/>
+
+    <div id="referencia">
+        <p class="sectionOfText">7. Referências </p>
+        <div class="textForRead">
+            
+        </div>
+    </div>
+    <br/>
+
+    <div id="agradecimentos">
+        <p class="sectionOfText">8. Agradecimentos </p>
+        <div class="textForRead">
+            
+        </div>
+    </div>
+    <br/>
+
+</div>
+</div>
 
 
 
