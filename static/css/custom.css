@@ -1,0 +1,56 @@
+.sectionOfText {
+	font-family: Georgia;
+	font-size: 22px;
+	border-bottom: 1px solid gray;
+}
+
+.subSectionOfText {
+	font-family: Georgia;
+	font-size: 18px
+}
+
+.textForRead {
+	font-family: Verdana;
+ 	line-height: 28px;
+	 margin:0 0 15px 0;
+}
+
+.customLoader {
+  position: absolute;
+  left: 50%;
+  z-index: 1;
+  width: 150px;
+  height: 150px;
+
+  border: 16px solid #f3f3f3;
+  border-radius: 50%;
+  border-top: 16px solid #3498db;
+  width: 120px;
+  height: 120px;
+  -webkit-animation: spin 2s linear infinite;
+  animation: spin 2s linear infinite;
+}
+
+@keyframes spin {
+  0% { transform: rotate(0deg); }
+  100% { transform: rotate(360deg); }
+}
+
+body {
+	/* Margin bottom by footer height */
+	margin-bottom: 85px;
+}
+
+.page-content {
+	margin-bottom: 20px
+}
+
+.navoption {
+  border-right:solid 1px #fff;
+}
+
+.conteudo_link{
+  color: black;
+  text-decoration: underline;
+}
+/* SIDE BAR */

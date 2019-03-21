@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <title>SemanticSUS</title>
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+    <link rel="stylesheet" href="static/css/custom.css">
+    <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" crossorigin="anonymous"></script>
+</head>
+<body>
+	<div style="background-color: red">
+	    <nav class="navbar navbar-expand navbar-dark bg-dark">
+	        <a class="navbar-brand" href="#">SemanticSUS </a>
+
+	        <div class="collapse navbar-collapse">
+	            <ul class="navbar-nav mr-auto">
+	                <li class="nav-item navoption"><a class="nav-link" href="/">Home</a></li>
+	                <li class="nav-item navoption"><a class="nav-link" href="/is.html">Integração Semântica</a></li>
+	                <li class="nav-item navoption"><a class="nav-link" href="/mediador_semantico.html">Mediador Semântico</a></li>
+	                <li class="nav-item navoption"><a class="nav-link" href="/mashup_builder.html">MashupBuilder</a></li>
+	            </ul>
+	        </div>
+	    </nav>
+	</div>
+
+	<div class="container">
+
+			
+		<div class="textForRead">
+			<h2 class="sectionOfText"><i>Integração de Dados</i></h2>
+			<p>O resultado obtido na camada de integração semântica é utilizado na construção de uma visão homogênea sobre os dados. Essa visão pode utilizar um enfoque virtual (Mediador Semântico) ou um enfoque materializado (Mashup de Dados) para prover acesso aos dados.</p>
+		</div>
+		<hr>
+
+
+			
+		
+		<div class="textForRead">
+			<h3><i>Mediador semântico</i></h3>
+			<p>O Mediador Semântico (MS) é um sistema que  permite que sejam realizadas  consultas às fontes de dados através da Visão Ontológica definida pela integração semântica. A visão ontológica provê um único ponto de acesso aos dados,  e permite que consultas sejam formuladas em termos da ontologia de domínio, de forma que o usuário não precisa entender das fontes de dados, nem das relações entre elas, e a resposta é recebida de forma inteligível.</p><br/><br/>
+			A arquitetura do MS pode ser vista a seguir:
+			<div class="content">
+				<div class="grid">
+					<figure class="effect-zoe">
+						<img src="img/ms.png" alt="arquitetura do mediador semântico"/>
+						<figcaption>
+							<h2><span><i>Mediador Semântico</i></span></h2>
+							<p class="description">Arquitetura do <i>Mediador Semântico</i>.</p>
+						</figcaption>			
+					</figure>
+					<ul class="left">
+						<li><b>Ontop:</b>Ontop é responsável por oferecer uma visão conceitual semântica dos dados integrados seguindo a ontologia de domínio. Ontop recebe uma consulta SPARQL sobre a ontologia de domínio e a traduz para uma consulta SQL sobre o esquema relacional global definido em Teiid. O processo de tradução da consulta é feito por meio dos mapeamentos das visões exportadas definidas na especificação da integração semântica. Além disso, Ontop é responsável por receber o resultado da consulta SQL retornada por Teiid e transformá-lo no formato solicitado pela consulta SPARQL.</li>
+						<li><b>Teiid:</b>Teiid oferece uma abstração de banco relacional, oferecendo uma visão global unificada das múltiplas fontes relacionais como um único esquema. Teiid gerencia o processamento de consultas federadas, recebendo uma consulta SQL sobre seu esquema global e a traduz em múltiplas consultas SQLs sobre as múltiplas fontes originais.</li>
+					</ul>
+				</div>
+			</div>
+
+		</div>
+		<hr>
+
+
+	</div>
+
+</body></html>
