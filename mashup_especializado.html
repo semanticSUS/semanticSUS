@@ -27,7 +27,100 @@
 	    </nav>
 	</div>
 	<div class="container">
-		<h2 class="textForRed">Pagina em construção...</h2>
+		<p class="sectionOfText">
+            Mashup RMN (Risco Morte Neonatal)
+        </p>
+        <p class="textForRead">
+        	<b class="subSectionOfText">1. Descrição:</b> <br/>
+        	Foi utilizado no desenvolvimento de um modelo preditivo para estabelecer o risco de morte neonatal. O mashup RMN deverá conter as seguintes informações sobre as crianças que morreram antes de completarem 28 dias de vida (período neonatal):  peso, idade gestacional, Apgar, e prévios relatórios de  natimorto da mãe.
+        </p>
+		
+		<p >
+            <b class="subSectionOfText">2. Especificação da visão do Mashup:</b>	
+            <br>
+            <pre>
+	<b>SELECT</b> *
+	<b>WHERE</b> {
+	    ?bebe a osus:PessoaMorta, osus:RN . 
+	    ?bebe osus:diasVividos ?diasVividos. 
+	    ?bebe osus:sexo ?sexo . 
+	    ?bebe osus:temMae/osus:qtdNascMortos ?qtdNascMortos . 
+	    ?bebe osus:infoNasc/osus:apgarPrimeiroMinuto ?apgarPrimeiroMinuto . 
+	    ?bebe osus:infoNasc/osus:apgarQuintoMinuto ?apgarQuintoMinuto . 
+	    ?bebe osus:infoNasc/osus:parto/osus:gestacao/osus:tempoGestacional ?tempoGestacional . 
+
+	    <b>FILTER</b> (?diasVividos <= 28)
+	}
+            </pre>
+        </p>
+
+		<b class="subSectionOfText">
+            3. Bases Utilizadas
+        </b>
+        <p class="textForRead">
+            <ul>
+            	<li><p class="subSectionOfText"> SIM - Sistema de Informações sobre Mortalidade</p></li>
+            	<li><p class="subSectionOfText"> SINASC - Sistema de Informações sobre Nascidos Vivos</p></li>
+            </ul>
+        </p>
+    
+
+
+        <b class="subSectionOfText">
+            4. Visões Exportadas
+        </b>
+        <ul>
+	        <li>
+	        	<p>
+	        		
+	            <i class="subSectionOfText"> E'<sub><small>SIM</small></sub></i> -
+	            <a href="https://www.dropbox.com/s/pqglynt54j5k984/sbcas_sim_r.ttl?dl=1" download>
+	                Download Mapeamentos  <i> E'<sub><small>SIM</small></sub></i>
+	            </a>
+	        	</p>
+	        </li>
+        <!--
+        <p>Representação visual da Ontologia Local <i> O<sub><small>SIM</small></sub></i>:</p>
+        <img class="rounded text-left d-block" src="img/sim.png" style="width:30%"/>
+        <br/>
+        -->
+		
+	        <li>  
+	        	<p>
+	        		
+	        	<i class="subSectionOfText"> E'<sub><small>SINASC</small></sub></i> -
+	        	<a href="https://www.dropbox.com/s/z36tzkmhn8r49bt/sbcas_sinasc.ttl?dl=1" download>
+	           		Download Mapeamentos  <i> E'<sub><small>SINASC</small></sub></i>
+	        	</a>
+	        	</p>
+	        </li>
+    	</ul>
+        <!--
+        <p>Representação visual da Ontologia Local <i> O<sub><small>SINASC</small></sub></i>:</p>
+        <img class="rounded text-left d-block" src="img/sinasc.png" style="width:40%"/>
+        <br>
+    	-->
+
+        <b class="subSectionOfText">
+            5. Regras de Linkage
+        </b>
+         <p class="textForRead">
+        	<a href="https://www.dropbox.com/s/lo08owrhuzkg7xn/deterministico.xml?dl=1" download>Download Especificação SILK</a>
+        </p>
+        <!--
+        <p>Representação visual dos links semânticos:</p>
+        <img class="rounded text-left d-block" src="img/linkssemanticos.png" style="width:80%"/>
+        <br>
+    	-->
+
+        <b class="subSectionOfText">
+            6. Regras de Fusão
+        </b>
+        <p class="textForRead">
+            <a href="https://www.dropbox.com/s/358clk4oe65ymts/sieve-config.xml?dl=1" download>Download Especificação Sieve</a>
+        </p>
+
+	</div>
 
 	</div>
 

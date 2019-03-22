@@ -8,6 +8,17 @@
     <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous"></script>
     <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" crossorigin="anonymous"></script>
+    <script type="text/x-mathjax-config">
+      MathJax.Hub.Config({
+        tex2jax: {
+          inlineMath: [ ['$','$'], ["\\(","\\)"] ],
+          processEscapes: true
+        }
+      });
+    </script>
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.2/MathJax.js?config=TeX-MML-AM_CHTML"></script>
+
 </head>
 <body>
 	<div style="background-color: red">
@@ -63,8 +74,11 @@
             O SemanticSUS tem como principal objetivo oferecer uma camada ontológica, conectada semanticamente aos dados, e que permita o acesso integrado aos dados.
             A plataforma disponibiliza também o serviço de integração semântica baseado na abordagem <i>pay-as-you-go</i>, o que garante flexibilidade e extensibilidade suficientes para que novas fontes de dados possam ser adicionadas ao portal.
             Outra facilidade do portal é a ferramenta <i>Mashup Buider</i>, a qual permite a construção de Mashup de Dados de forma simples e automática.
-            <img alt="Arquitetura Portal" class="rounded mx-auto d-block" src="img/visaosemantica.png">
         </div>
+            <figure class="text-center">
+              <img class="mx-auto d-block figure-img img-fluid rounded z-depth-1" src="img/visaosemantica.png">
+              <figcaption class="figure-caption"><b><i>Figura 1: Representação da camada semântica</i></b></figcaption>
+            </figure>
     </div>
 
     <br/>
@@ -84,7 +98,44 @@
 
             <br><br>
 
-            <img alt="Arquitetura Portal" class="rounded mx-auto d-block" src="img/arquitetura_portal.png">
+            <figure class="text-center">
+              <img  class="mx-auto d-block figure-img img-fluid rounded z-depth-1" src="img/arquitetura_portal.png">
+              <figcaption class="figure-caption"><b><i>Figura 2: Arquitetura Portal Semântico</i></b></figcaption>
+            </figure>
+            
+            
+
+            <ul>
+              <li> <b>Fontes de dados:</b> Nesta camada estão as fontes de dados disponibilizadas pelo portal. As fontes de dados podem ser de diferentes tipos e proveniência.
+              </li>
+
+              <li> <b>Extração e anotação de dados:</b> Nesta camada é realizada a extração e anotação das fontes de dados  disponíveis no Portal.  As anotações são metadados que  descrevem desde o formato da fonte até comentários sobre os significados de elementos do esquema utilizado pela fonte.
+              </li>
+              <li> <b>Ontologia de Domínio:</b> Essa ontologia é usada como um meio para estabelecer um vocabulário formal e explícito a ser compartilhado para a anotação semântica das fontes de dados. A linguagem utilizada para modelagem da ontologia é a linguagem <a target="_blank" href="https://www.w3.org/OWL/">OWL</a>.
+              </li>
+              <li> <b>Integração Semântica (IS):</b> O resultado da IS define uma visão virtual integrada das múltiplas fontes de dados. Na IS usamos um <i>framework</i> baseado em 3 camadas, como sumarizado na Figura 3. De acordo com esse <i>framework</i>, o resultado da IS  é uma n-tupla $\lambda=(O_D,  {V_1},...,{V_n}, L, F, Q)$, onde:
+                <ul>
+                <li> $O_D$ é a ontologia de Domínio.</li>
+                <li> $V_1, ..., V_n$ são especificações de visões virtuais locais descritas pelas ontologias locais $O_{V_1},...,O_{V_n}$.</li>
+                <li> $L$ é um conjunto de regras de <i>linkage</i> (links semânticos) definidas entre as classes semanticamente semelhantes das ontologias locais. </li>
+                <li> $F$ é um conjunto de  regras de fusão as quais especificam o processo de fusão de objetos relacionados através de um link <i>sameAS</i> em uma única representação.</li> 
+                <li> $Q$ é um conjunto de métricas de avaliação de qualidade, que são usadas para quantificar a qualidade das fontes de dados.</li> 
+                </ul>
+              </li>
+
+              <figure class="text-center">
+                <img class="mx-auto d-block figure-img img-fluid rounded z-depth-1" style="width: 30%" src="img/frameworkontologia-_1_.png">
+                <figcaption class="figure-caption"><b><i>Figura 3: Framework em 3 Camadas</i></b></figcaption>
+              </figure>
+              
+              <li><b>Integração de Dados</b>: O Portal disponibiliza dois serviços de acesso às fontes de dados locais através da visão ontológica.
+                <ul>
+                  <li><a href="#consultando_visao">Mediador Semântico</a></li>    
+                  <li><a href="#construindo_mashub">Mashup Builder</a></li>    
+
+                </ul>
+              </li>
+          </ul>
         </div>
     </div>
 
@@ -93,7 +144,22 @@
     <div id="is_semanticSUS">
         <p class="sectionOfText">3. Integração Semântica do SemanticSUS </p>
         <div class="textForRead">
-            
+            No SemanticSUS, o processo de Integração Semântica (IS)  é baseado na abordagem <i>pay-as-you-go</i>. Essa abordagem permite que a IS possa ser realizada de forma incremental, e a medida que mais esforço é investido na integração semântica de novas fontes de dados, o portal poderá atender as necessidades de um maior número de aplicações. O processo de IS de uma  fonte $S$ segue os seguintes passos: 
+
+            <ol>
+              <li> Especificação da visão virtual local $V_S$= &lt $O_S$, $M_S$ &gt  onde  $O_S$  é a ontologia da visão, e $M_S$ é um conjunto de regras que mapeiam o vocabulário de  $O_S$ no vocabulário da fonte S.  Note que $O_S$  descreve a fonte de dados usando o vocabulário da Ontologia de domínio,  portanto $O_S$  é um subconjunto de $O_D$. Na construção da ontologia  de domínio também adotamos o enfoque \textit{pay-as-you-go}. 
+              </li>
+              <li> Especificação das Regras de <i>Linkage</i> as quais serão usadas para gerar Links semânticos, que mapeiam instâncias de $S$ com instâncias de outras fontes de dados que representam o mesmo objeto do mundo real (<i>resolução de entidades</i>). Em OWL, esses links são estabelecidos através da propriedade <i>owl:sameAs</i>. O processo de identificação desses <i>links</i> é conhecido como <i>linkage</i> de dados. 
+              </li>
+              <li> Especificação das regras de fusão para as propriedades de $S$.  Estas regras são definidas com base na qualidade da fonte $S$, e são necessárias na resolução de conflitos gerados por inconsistências nos dados \cite{mendes2012sieve}. 
+              </li>
+            </ol>
+
+
+
+
+
+  O portal atualmente <i>SemanticSSUS</i> publica duas bases de Dados do SUS: o SIM (Sistema de Informações sobre Mortalidade) e o SINASC(Sistema de Informações sobre NASCidos vivos). Essa fontes estão integradas semanticamente e já podem ser acessada através da visão ontológica do portal. O resultado da Integração semântica das fontes de dados SIM e SINASC pode ser visualizado na aba <a href="">Visão Semântica</a>. 
         </div>
     </div>
     <br/>
@@ -102,7 +168,7 @@
     <div id="consultando_visao">
         <p class="sectionOfText">4. Consultando as fontes de dados através da Visão Semântica </p>
         <div class="textForRead">
-            O Mediador Semântico (MS) é um sistema que  permite que sejam realizadas  consultas às fontes de dados através da Visão Ontológica definida pela integração semântica. A visão ontológica provê um único ponto de acesso aos dados,  e permite que consultas sejam formuladas em termos da ontologia de domínio, de forma que o usuário não precisa entender das fontes de dados, nem das relações entre elas, e a resposta é recebida de forma inteligível.  <a href="mediador_semantico.html">(Ler mais sobre)</a>
+            Os usuários podem definir consultas <i>ad-hoc</i> sobre a ontologia de Domínio, e o <i>mediador semântico</i>, com base na ontologia e nos mapeamentos, irá reformular a consulta em  termos de consultas sobre as fontes de dados. O resultado das sub-consultas são integrados e consolidados, e o resultado final é retornado para o usuário.  <a href="mediador_semantico.html">(Ler mais sobre)</a>
         </div>
     </div>
     <br/>
@@ -110,7 +176,7 @@
     <div id="construindo_mashub">
         <p class="sectionOfText">5. Construindo Mashup de Dados Especializado </p>
         <div class="textForRead">
-            
+             Os usuários podem especificar uma visão de <i>Mashup</i> especializada através de uma interface de consulta facetada sobre a ontologia de domínio, e o <i>Mashup Builder</i> irá materializar a visão de <i>mashup</i> de forma automática, baseado no resultado da integração semântica.<a href="mashup_builder.html">(Ler mais sobre)</a>
         </div>
     </div>
     <br/>
@@ -118,7 +184,7 @@
     <div id="ex_mashup">
         <p class="sectionOfText">6. Exemplos de Mashups Especializados </p>
         <div class="textForRead">
-            
+            O <i>Mashup Builder</i> foi aplicado na criação do <i>mashup</i> RMN(Risco Morte Neonatal)  utilizado no desenvolvimento de um modelo preditivo para estabelecer o risco de morte neonatal. O mashup RMN deverá conter as seguintes informações sobre as crianças que morreram antes de completarem 28 dias de vida (período neonatal):  peso, idade gestacional, Apgar, e prévios relatórios de  natimorto da mãe. O <i>mashup</i> foi construído utilizando as fontes de dados SIM e SINASC disponíveis na base de dados do sistema GISSA como discutimos a seguir. A construção do <i>mashup </i> RMN  usando a ferramenta Mashup Builder. <a href="mashup_especializado.html">(Ler mais sobre)</a>
         </div>
     </div>
     <br/>
@@ -126,7 +192,7 @@
     <div id="referencia">
         <p class="sectionOfText">7. Referências </p>
         <div class="textForRead">
-            
+            ...
         </div>
     </div>
     <br/>
@@ -134,7 +200,7 @@
     <div id="agradecimentos">
         <p class="sectionOfText">8. Agradecimentos </p>
         <div class="textForRead">
-            
+            ...
         </div>
     </div>
     <br/>
