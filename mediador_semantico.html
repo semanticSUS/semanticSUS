@@ -29,7 +29,7 @@
 
 			<div class="container">
 	
-				<div class="sectionOfText"><i>Mediador semântico</i></div>
+				<div class="sectionOfText">Mediador semântico</div>
 				<div class="textForRead">
 					<p>
 						O Mediador Semântico (MS) é um sistema que  permite que sejam realizadas  consultas às fontes de dados através da Visão Ontológica definida pela integração semântica. A visão ontológica provê um único ponto de acesso aos dados,  e permite que consultas sejam formuladas em termos da ontologia de domínio, de forma que o usuário não precisa entender das fontes de dados, nem das relações entre elas, e a resposta é recebida de forma inteligível.
@@ -53,7 +53,20 @@
 				</div>
 
 	
-				<hr>
+				<div class="sectionOfText">Exemplos de Consulta</div>
+				<div class="textForRead">
+					<p>
+						Para demostrar o fluxo seguido pelo MS no processamento de uma consulta, suponha que um usuário deseja obter informações sobre o parto das crianças que vieram a óbito com menos de 28 dias e tiveram asfixia ao nascer.  Para responder essa requisição é necessário consultar a fonte de dados do SIM, para identificar as crianças que vieram a óbito com menos de 28 dias, e a fonte de dados do SINASC, para  obter as informações sobre o parto dessas crianças. Além disso, é preciso explorar os axiomas da ontologia para inferir sobre “asfixia no parto”, uma vez que essa informação não está disponível de forma explícita nas fontes de dados. Os passos envolvidos no processamento de uma consulta são sumarizados a seguir:
+					<p>
+					<ol>
+					    <li> O usuário define a consulta SPARQL Q sobre a ontologia de domínio da visão ontológica.</li>
+					    <li> A consulta Q é traduzida em sub-consultas SQL definidas sobre o esquema das fontes de dados locais. A tradução é feita baseada nos mapeamentos entre as fontes de dados e a ontologia de domínio. Note que é necessário o uso de “mapeamentos completos”, o que significa que os axiomas, restrições de integridade, e as regras de ligação são todos compiladas nos mapeamentos. </li>
+					    <li> As sub-consultas SQL são executadas pelo SGBD local.</li>
+					    <li> O resultado das sub-consultas são integrados usando os links <i>sameAs</i>, e o resultado final  é traduzido em RDF, de acordo com a consulta SPARQL.</li>
+					    <li> O resultado é então retornado para o usuário</li>
+					</ol>
+					<iframe width="660" height="415" src="https://www.youtube.com/embed/zZCPDNL5Ga8" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+				</div>
 
 
 		</div>

@@ -147,11 +147,11 @@
             No SemanticSUS, o processo de Integração Semântica (IS)  é baseado na abordagem <i>pay-as-you-go</i>. Essa abordagem permite que a IS possa ser realizada de forma incremental, e a medida que mais esforço é investido na integração semântica de novas fontes de dados, o portal poderá atender as necessidades de um maior número de aplicações. O processo de IS de uma  fonte $S$ segue os seguintes passos: 
 
             <ol>
-              <li> Especificação da visão virtual local $V_S$= &lt $O_S$, $M_S$ &gt  onde  $O_S$  é a ontologia da visão, e $M_S$ é um conjunto de regras que mapeiam o vocabulário de  $O_S$ no vocabulário da fonte S.  Note que $O_S$  descreve a fonte de dados usando o vocabulário da Ontologia de domínio,  portanto $O_S$  é um subconjunto de $O_D$. Na construção da ontologia  de domínio também adotamos o enfoque \textit{pay-as-you-go}. 
+              <li> Especificação da visão virtual local $V_S$= &lt $O_S$, $M_S$ &gt  onde  $O_S$  é a ontologia da visão, e $M_S$ é um conjunto de regras que mapeiam o vocabulário de  $O_S$ no vocabulário da fonte S.  Note que $O_S$  descreve a fonte de dados usando o vocabulário da Ontologia de domínio,  portanto $O_S$  é um subconjunto de $O_D$. Na construção da ontologia  de domínio também adotamos o enfoque <i>pay-as-you-go</i>. 
               </li>
               <li> Especificação das Regras de <i>Linkage</i> as quais serão usadas para gerar Links semânticos, que mapeiam instâncias de $S$ com instâncias de outras fontes de dados que representam o mesmo objeto do mundo real (<i>resolução de entidades</i>). Em OWL, esses links são estabelecidos através da propriedade <i>owl:sameAs</i>. O processo de identificação desses <i>links</i> é conhecido como <i>linkage</i> de dados. 
               </li>
-              <li> Especificação das regras de fusão para as propriedades de $S$.  Estas regras são definidas com base na qualidade da fonte $S$, e são necessárias na resolução de conflitos gerados por inconsistências nos dados \cite{mendes2012sieve}. 
+              <li> Especificação das regras de fusão para as propriedades de $S$.  Estas regras são definidas com base na qualidade da fonte $S$, e são necessárias na resolução de conflitos gerados por inconsistências nos dados. 
               </li>
             </ol>
 

@@ -29,7 +29,7 @@
 
 	<div class="container">
 
-		<div class="sectionOfText"><i>Mashup Builder</i></div>
+		<div class="sectionOfText">Mashup Builder</div>
 		<div class="textForRead">
 			<p>Uma das facilidades do <i>SemanticSUS</i> é a ferramenta <i>Mashup Builder</i>, uma ferramenta que permite a construção automática de <i>mashup</i> de dados especializado usando a integração semântica à priori das fontes de dados. Como mostrado na Figura abaixo</i>, o <i>Mashup Builder</i> recebe como entrada a especificação da visão de aplicação sobre a ontologia de domínio, e baseado na integração semântica, e realiza a materialização do <i>mashup</i> especializado requerido pelo usuário.</p>
 		
@@ -39,27 +39,33 @@
               <figcaption class="figure-caption"><b><i>Figura 1: Construção de Mashup de Dados Especializado</i></b></figcaption>
             </figure>
 			
-			
+    	</div>
 
 			<br/>
 			<br/>
-			<div class="sectionOfText">Passo-a-passo do Mashup Builder:</div>
-			<ol>
-				<li>Primeiro, o usuário deve especificar a necessidade de informação da aplicação  através de uma consulta (facetada) definida sobre a ontologia de domínio.</li>
-				
-				<li>Em seguida, baseado na consulta definida no passo 1 e no resultado da integração semântica do SIM e SINASC, a ferramenta  gera automáticamente  a especificação da visão do mashup sobre as fontes de dados.</li>
-				
-				<li>Por fim, a ferramenta realiza a materialização da Visão do mashup em 3 passos: 
-					<ul>
-					<li> Primeiro, as visões exportadas são materializadas D2RQ usando mapeamentos R2RML que mapeiam os dados das fontes de dados SIM e SINASC em instâncias das visões exportadas por estas fontes. 
+			<div class="subSectionOfText">Passo-a-passo do Mashup Builder:</div>
+			<div class="textForRead">
+				<ol>
+					<li>Primeiro, o usuário deve especificar a necessidade de informação da aplicação  através de uma consulta (facetada) definida sobre a ontologia de domínio.</li>
+					
+					<li>Em seguida, baseado na consulta definida no passo 1 e no resultado da integração semântica do SIM e SINASC, a ferramenta  gera automáticamente  a especificação da visão do mashup sobre as fontes de dados.</li>
+					
+					<li>Por fim, a ferramenta realiza a materialização da Visão do mashup em 3 passos: 
+						<ul>
+						<li> Primeiro, as visões exportadas são materializadas D2RQ usando mapeamentos R2RML que mapeiam os dados das fontes de dados SIM e SINASC em instâncias das visões exportadas por estas fontes. 
+						</li>
+						<li> Em seguida, os links sameAs entre instâncias das classes sim:PessoaMorta e  sinasc:RN são gerados pela ferramenta SILK, de acordo com a regra de linkage L<sub>RMN</sub> definida na visão semântica. </li>
+						<li> Por último, é realizada a fusão dos objetos - relacionados através de um link sameAS - em uma única representação. O processo de fusão é realizado pela ferramenta SIEVE. </li>
+						</ul>
 					</li>
-					<li> Em seguida, os links sameAs entre instâncias das classes sim:PessoaMorta e  sinasc:RN são gerados pela ferramenta SILK, de acordo com a regra de linkage L<sub>RMN</sub> definida na visão semântica. </li>
-					<li> Por último, é realizada a fusão dos objetos - relacionados através de um link sameAS - em uma única representação. O processo de fusão é realizado pela ferramenta SIEVE. </li>
-					</ul>
-				</li>
-			</ol>
+				</ol>
+			</div>
 			
-		</div>
+			<div class="sectionOfText">Exemplos de Mashup</div>
+			<div class="textForRead">
+				Abaixo temos um video ilustrando o uso do Mashup Builder e uma comparação entre um dos mapeamentos dado como entrada e o mapeamento reescrito:
+			</div>
+		
 
 
 	</div>
