@@ -18,7 +18,7 @@
 	            <ul class="navbar-nav mr-auto">
 	                <li class="nav-item navoption"><a class="nav-link" href="index.html">Inicio</a></li>
 	                <li class="nav-item navoption"><a class="nav-link" href="visao_semantica.html">Visão Semântica</a></li>
-	                <li class="nav-item navoption"><a class="nav-link" href="edit_vis.html">Editar Visão</a></li>
+	                <li class="nav-item navoption"><a class="nav-link" href="edit_vis.html">Editar Visão Semântica</a></li>
 	                <li class="nav-item navoption"><a class="nav-link" href="mediador_semantico.html">Mediador Semântico</a></li>
 	                <li class="nav-item navoption"><a class="nav-link" href="mashup_builder.html">Mashup Builder</a></li>
 	                <li class="nav-item navoption"><a class="nav-link" href="mashup_especializado.html">Mashups Especializados</a></li>
@@ -37,76 +37,149 @@
 	<div class="container">
 
         <p class="sectionOfText">
-            1. Ontologia de Dominio
-        </p>
-        <a href="https://www.dropbox.com/s/s1axrccurmgmczk/domain_ontology.owl?dl=1" download>Download ontologia em OWL</a>
-        <p>Representação visual da ontologia de Dominio:</p>
-        <img class="rounded text-left d-block" src="img/ontologiadominio.png" style="width:70%"/>
-        <br>
-
-
-		<p class="sectionOfText">
-            2. Bases Publicadas
+            Visão Semântica
         </p>
         <p class="textForRead">
-            <p class="subSectionOfText">1.1 SIM</p>
-            O Sistema de Informação Sobre Mortalidade (SIM), desenvolvido pelo Ministério da Saúde, em 1975, é produto da unificação de mais de quarenta modelos de instrumentos utilizados, ao longo dos anos, para coletar dados sobre mortalidade no país. Possui variáveis que permitem, a partir da causa mortis atestada pelo médico, construir indicadores e processar análises epidemiológicas que contribuam para a eficiência da gestão em saúde.
 
-            O SIM foi informatizado em 1979. Doze anos depois, com a implantação do SUS e sob a premissa da descentralização teve a coleta de dados repassada à atribuição dos Estados e Municípios, através das suas respectivas Secretarias de Saúde. Com a finalidade de reunir dados quantitativos e qualitativos sobre óbitos ocorridos no Brasil, o SIM é considerado uma importante ferramenta de gestão na área da saúde que subsidiam a tomada de decisão em diversas áreas da assistência à saúde. No nível federal, sua gestão está afeta à Secretaria de Vigilância à Saúde.
+        </p>
 
-            O Sistema de informações sobre mortalidade dispõe de um ambiente de compartilhamento de informações on-line com diversas utilidades e aplicações. O acesso a este ambiente é restrito a pessoas cadastradas, para garantir a confidencialidade dos dados pessoais dos envolvidos nos registros. 
-            (<a href="http://svs.aids.gov.br/dantps/cgiae/sim/apresentacao/">Fonte</a>)
-            <br/><br/>
+        <div id="menu_index">
+            <p class="subSectionOfText">
+                <a name="lista_conteudo" id="lista_conteudo"></a>
+                Resultado da Integração Semântica
+            </p>
+            <p class="textForRead">
+                <ol>
+                    <li><a class="conteudo_link" href="#ontologia_dominio"> Ontologia de Dominio </a></li>
+                    <li>
+                        <a class="conteudo_link" href="#fontes_publicadas"> Fontes de Dados Publicadas </a>
+                        <ul style="list-style-type: none; text-indent: -2.5em;">
+                            <li><a class="conteudo_link" href="#fonte_sim"> 2.1 SIM</li></a>
+                            <li><a class="conteudo_link" href="#fonte_sinasc"> 2.2 SINASC</li></a>
+                        </ul>
+                    </li>
+                    <li>
+                        <a class="conteudo_link" href="#is_vsl"> Visões Virtuais Locais </a>
+                        <ul style="list-style-type: none; text-indent: -2.5em;">
+                            <li><a class="conteudo_link" href="#is_vsl_sim"> 3.1 Visão Local do SIM</li></a>
+                            <li><a class="conteudo_link" href="#is_vsl_sinasc"> 3.1 Visão Local do SINASC</li></a>
+                        </ul>
+                    </li>
+                    <li>
+                        <a class="conteudo_link" href="#regras_linkage"> Regras de Linkage </a>
+                    </li>
+                    <li><a class="conteudo_link" href="#regras_sieve"> Regras de Fusão </a></li>
+               </ol>
+           </p>
+        </div>
 
+        <div id="ontologia_dominio">
             
+            <p class="sectionOfText">
+                1. Ontologia de Dominio
+            </p>
+            <ul>
+                <li><a href="https://www.dropbox.com/s/s1axrccurmgmczk/domain_ontology.owl?dl=1" download>Download ontologia em OWL</a></li>    
+                <li><a href="img/ontologiadominio.png">Representação visual da ontologia de Dominio</a></li>
+            </ul>
+           
+        </div>
+        
+        <br>
 
-            <p class="subSectionOfText">1.2 SINASC</p>
-            O Sistema de Informações sobre Nascidos Vivos (SINASC), foi implantado oficialmente a partir de 1990, com o objetivo de coletar dados sobre os nascimentos informados em todo território nacional e fornecer dados sobre natalidade para todos os níveis do Sistema de Saúde.
+        <div id="fontes_publicadas">
+    		<p class="sectionOfText">
+                2. Fontes de Dados Publicadas
+            </p>
+            <p class="textForRead">
+                <div id="fonte_sim">
+                    
+                    <p class="subSectionOfText">1.1 SIM</p>
+                    O Sistema de Informação Sobre Mortalidade (SIM), desenvolvido pelo Ministério da Saúde, em 1975, é produto da unificação de mais de quarenta modelos de instrumentos utilizados, ao longo dos anos, para coletar dados sobre mortalidade no país. Possui variáveis que permitem, a partir da causa mortis atestada pelo médico, construir indicadores e processar análises epidemiológicas que contribuam para a eficiência da gestão em saúde.
 
-            A Secretaria de Vigilância em Saúde (SVS/MS) é gestora no Nível Nacional, sendo de sua responsabilidade, mais especificamente da Coordenação-Geral de Informações e Análises Epidemiológicas (CGIAE) e do Departamento de Vigilância de Doenças e Agravos não Transmissíveis e Promoção da Saúde (DANTPS) as alterações de layout bem como providências para impressão e distribuição dos formulários de Declaração de Nascido Vivo (DN) e dos manuais do Sistema. A implantação do SINASC ocorreu de forma gradual em todas as unidades da Federação e já vem apresentando em muitos municípios, desde o ano de 1994, um número maior de registros do que o publicado pelo IBGE com base nos dados de Cartório de Registro Civil. O Sistema possibilita, também, a construção de indicadores úteis para o planejamento de gestão dos serviços de saúde.
-            (<a href="http://svs.aids.gov.br/dantps/cgiae/sinasc/apresentacao/">Fonte</a>)
+                    O SIM foi informatizado em 1979. Doze anos depois, com a implantação do SUS e sob a premissa da descentralização teve a coleta de dados repassada à atribuição dos Estados e Municípios, através das suas respectivas Secretarias de Saúde. Com a finalidade de reunir dados quantitativos e qualitativos sobre óbitos ocorridos no Brasil, o SIM é considerado uma importante ferramenta de gestão na área da saúde que subsidiam a tomada de decisão em diversas áreas da assistência à saúde. No nível federal, sua gestão está afeta à Secretaria de Vigilância à Saúde.
+
+                    O Sistema de informações sobre mortalidade dispõe de um ambiente de compartilhamento de informações on-line com diversas utilidades e aplicações. O acesso a este ambiente é restrito a pessoas cadastradas, para garantir a confidencialidade dos dados pessoais dos envolvidos nos registros. 
+                    (<a href="http://svs.aids.gov.br/dantps/cgiae/sim/apresentacao/">Fonte</a>)
+
+                </div>
+
+                <br/>
+
+                <div id="fonte_sinasc">
+                    <p class="subSectionOfText">1.2 SINASC</p>
+                    O Sistema de Informações sobre Nascidos Vivos (SINASC), foi implantado oficialmente a partir de 1990, com o objetivo de coletar dados sobre os nascimentos informados em todo território nacional e fornecer dados sobre natalidade para todos os níveis do Sistema de Saúde.
+
+                    A Secretaria de Vigilância em Saúde (SVS/MS) é gestora no Nível Nacional, sendo de sua responsabilidade, mais especificamente da Coordenação-Geral de Informações e Análises Epidemiológicas (CGIAE) e do Departamento de Vigilância de Doenças e Agravos não Transmissíveis e Promoção da Saúde (DANTPS) as alterações de layout bem como providências para impressão e distribuição dos formulários de Declaração de Nascido Vivo (DN) e dos manuais do Sistema. A implantação do SINASC ocorreu de forma gradual em todas as unidades da Federação e já vem apresentando em muitos municípios, desde o ano de 1994, um número maior de registros do que o publicado pelo IBGE com base nos dados de Cartório de Registro Civil. O Sistema possibilita, também, a construção de indicadores úteis para o planejamento de gestão dos serviços de saúde.
+                    (<a href="http://svs.aids.gov.br/dantps/cgiae/sinasc/apresentacao/">Fonte</a>)
+                </div>
+                
+            </p>
+        </div>
+        
+        <br>
+
+        <div id="is_vsl">
+            <p class="sectionOfText">
+                <a name="linkssemanticos" id="linkssemanticos"></a>
+                3. Visões Virtuais Locais
+            </p>
+
+            <div id="is_vsl_sim">
+                <i class="subSectionOfText"> 3.1 Visão Local do SIM (E<sub><small>SIM</small></sub>)</i>
+                <ul>
+                    <li>
+                        <a href="https://www.dropbox.com/s/chtk7i8calgqnd1/sbcas_sim.ttl?dl=1" download>
+                        Mapeamentos R2RML
+                        </a>
+                    </li>
+                    <li>
+                        <a href="img/sim.png" >
+                        Representação visual da Ontologia Local
+                        </a>
+                    </li>
+                </ul>
+            </div>    
             
-        </p>
+            <div id="is_vsl_sinasc">     
+                <i class="subSectionOfText"> 3.2 Visão Local do SINASC (E<sub><small>SINASC</small></sub>)</i>
+                <ul>
+                    <li>                    
+                        <a href="https://www.dropbox.com/s/z36tzkmhn8r49bt/sbcas_sinasc.ttl?dl=1" download>
+                            Download Mapeamentos  <i> E<sub><small>SINASC</small></sub></i>
+                        </a>
+                    </li>
+                    <li>
+                        <a href="img/sinasc.png">
+                            Representação visual da Ontologia Local 
+                        </a>                        
+                    </li>
+                </ul>
+            </div>
+        </div>
+
         <br>
 
-
-        <p class="sectionOfText">
-            <a name="linkssemanticos" id="linkssemanticos"></a>
-            3. Visões Virtuais Locais
-        </p>
-
-        <p>
-            <i class="subSectionOfText"> 3.1 E<sub><small>SIM</small></sub></i> -
-            <a href="https://www.dropbox.com/s/chtk7i8calgqnd1/sbcas_sim.ttl?dl=1" download>
-                Download Mapeamentos  <i> E<sub><small>SIM</small></sub></i>
-            </a>
-        </p>
-        <p>Representação visual da Ontologia Local <i> O<sub><small>SIM</small></sub></i>:</p>
-        <img class="rounded text-left d-block" src="img/sim.png" style="width:30%"/>
-        <br/>
-
-        <p >  <span class="subSectionOfText"> <i> 3.2 E<sub><small>SINASC</small></sub></i> </span>-
-        <a href="https://www.dropbox.com/s/z36tzkmhn8r49bt/sbcas_sinasc.ttl?dl=1" download>
-            Download Mapeamentos  <i> E<sub><small>SINASC</small></sub></i>
-        </a>
-        <p>Representação visual da Ontologia Local <i> O<sub><small>SINASC</small></sub></i>:</p>
-        <img class="rounded text-left d-block" src="img/sinasc.png" style="width:40%"/>
+        <div class="regras_linkage">
+            <p class="sectionOfText">
+                4. Regras de Linkage
+            </p>
+            <ul>
+                <li><a href="https://www.dropbox.com/s/lo08owrhuzkg7xn/deterministico.xml?dl=1" download>Download Especificação SILK</a></li>
+                <li><a href="img/linkssemanticos.png">Representação visual dos links semânticos</a></li>
+            </ul>
+        </div>
+        
         <br>
 
-        <p class="sectionOfText">
-            4. Regras de Linkage
-        </p>
-        <a href="https://www.dropbox.com/s/lo08owrhuzkg7xn/deterministico.xml?dl=1" download>Download Especificação SILK</a>
-        <p>Representação visual dos links semânticos:</p>
-        <img class="rounded text-left d-block" src="img/linkssemanticos.png" style="width:80%"/>
-        <br>
-
-        <p class="sectionOfText">
-            5. Regras de Fusão
-        </p>
-        <p class="textForRead">
-            <a href="https://www.dropbox.com/s/358clk4oe65ymts/sieve-config.xml?dl=1" download>Download Especificação Sieve</a>
-        </p>
+        <div class="regras_sieve">
+            <p class="sectionOfText">
+                5. Regras de Fusão
+            </p>
+            <ul>
+                <li><a href="https://www.dropbox.com/s/358clk4oe65ymts/sieve-config.xml?dl=1" download>Download Especificação Sieve</a></li>
+            </ul>
+            
 
 	</div>
 		
