@@ -39,16 +39,20 @@
         <p class="sectionOfText">
             Visão Semântica
         </p>
-        <p class="textForRead">
+        <div class="textForRead">
+            A <b>visão semântica</b> se trata de uma visão unificada sobre as fontes de dados que utiliza uma ontologia para dar semântica unificada aos dados, independente da fonte de dados originaria. Abaixo, ilustra o framework de integração semantica utilizado pelo SemanticSUS (Figura 1a, bem como o resultado dessa integração: um conjunto de especificações relacionadas a cada etapa do processo de integração semântica.
+        <figure class="text-center">
+              <img class="mx-auto d-block figure-img img-fluid rounded z-depth-1" src="img/frameworkeresultado.png">
+              <figcaption class="figure-caption"><b><i> Figura 1a: Framework da utilizado para realizar a  Integração Semântica; Figura 1b: Resultado da Integração Semântica.</i></b></figcaption>
+        </figure>
+        </div>    
 
-        </p>
-
+        <hr>
         <div id="menu_index">
-            <p class="subSectionOfText">
-                <a name="lista_conteudo" id="lista_conteudo"></a>
+            <b class="subSectionOfText">
                 Resultado da Integração Semântica
-            </p>
-            <p class="textForRead">
+            </b>
+            <div class="textForRead">
                 <ol>
                     <li><a class="conteudo_link" href="#ontologia_dominio"> Ontologia de Dominio </a></li>
                     <li>
@@ -70,13 +74,16 @@
                     </li>
                     <li><a class="conteudo_link" href="#regras_sieve"> Regras de Fusão </a></li>
                </ol>
-           </p>
+           </div>
         </div>
 
-        <div id="ontologia_dominio">
+        <div class = "textForRead" id="ontologia_dominio">
             
             <p class="sectionOfText">
                 1. Ontologia de Dominio
+            </p>
+            <p>
+                <b>Definição:</b> Essa ontologia é usada como um meio para estabelecer um vocabulário formal e explícito a ser compartilhado para a anotação semântica das fontes de dados. A linguagem utilizada para modelagem da ontologia é a linguagem <a target="_blank" href="https://www.w3.org/OWL/">OWL</a>.
             </p>
             <ul>
                 <li><a href="https://www.dropbox.com/s/s1axrccurmgmczk/domain_ontology.owl?dl=1" download>Download ontologia em OWL</a></li>    
@@ -91,7 +98,7 @@
     		<p class="sectionOfText">
                 2. Fontes de Dados Publicadas
             </p>
-            <p class="textForRead">
+            <div class="textForRead">
                 <div id="fonte_sim">
                     
                     <p class="subSectionOfText">1.1 SIM</p>
@@ -114,17 +121,22 @@
                     (<a href="http://svs.aids.gov.br/dantps/cgiae/sinasc/apresentacao/">Fonte</a>)
                 </div>
                 
-            </p>
+            </div>
         </div>
         
         <br>
 
-        <div id="is_vsl">
+        <div id="is_vsl" class="textForRead">
             <p class="sectionOfText">
-                <a name="linkssemanticos" id="linkssemanticos"></a>
                 3. Visões Virtuais Locais
             </p>
-
+            
+                <b>Definição:</b> As visões virtuais locais são compostas por uma ontologia local e um conjunto de mapeamentos, onde:
+                <ul>
+                <li>Ontologia Local: Um subconjunto de termo da ontologia de dominio</li>
+                <li>Mapeamentos: Especificam o relacionamento entre as entidades existentes na fonte de dados e os termos da ontologia de dominio.</li>    
+                </ul>
+            
             <div id="is_vsl_sim">
                 <i class="subSectionOfText"> 3.1 Visão Local do SIM (E<sub><small>SIM</small></sub>)</i>
                 <ul>
@@ -160,25 +172,35 @@
 
         <br>
 
-        <div class="regras_linkage">
+        <div id="regras_linkage" class="textForRead">
             <p class="sectionOfText">
                 4. Regras de Linkage
             </p>
+             <b>Definição: </b>Esse conjunto de regras servem para identificar se objetos em bases diferentes representam o mesmo objeto do mundo real (<i>resolução de entidades</i>). Em Dados Interligados, esses links são estabelecidos através da propriedade <i>owl:sameAs</i>. O processo de identificação desses <i>links</i> é conhecido como <i>linkage de dados</i>. 
+           
+            <br>
+            <i class="subSectionOfText">Regra de Linkage L1</i>:
             <ul>
                 <li><a href="https://www.dropbox.com/s/lo08owrhuzkg7xn/deterministico.xml?dl=1" download>Download Especificação SILK</a></li>
                 <li><a href="img/linkssemanticos.png">Representação visual dos links semânticos</a></li>
             </ul>
         </div>
         
-        <br>
+        
 
-        <div class="regras_sieve">
+        <div id="regras_sieve" class="textForRead">
             <p class="sectionOfText">
                 5. Regras de Fusão
             </p>
-            <ul>
-                <li><a href="https://www.dropbox.com/s/358clk4oe65ymts/sieve-config.xml?dl=1" download>Download Especificação Sieve</a></li>
-            </ul>
+            <b>Definição:</b> As regras de fusão explicitam a forma como as diferentes representações de uma mesmo objeto do mundo real são combinadas em uma única representação clara e concisa. Durante a fusão, conflito originados dos dados podem ocorrer. As soluções para esses conflitos normalmente utilizam critérios de qualidades sobre os dados.
+          
+      
+            <div>
+                <i class="subSectionOfText">Regra de Fusão F1</i>:
+                <ul>
+                    <li><a href="https://www.dropbox.com/s/358clk4oe65ymts/sieve-config.xml?dl=1" download>Download Especificação Sieve</a></li>
+                </ul>
+            </div>
             
 
 	</div>
