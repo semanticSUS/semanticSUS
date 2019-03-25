@@ -36,9 +36,15 @@
             
         </p>
 		<hr/>
+      
 		<div >
-            <b class="subSectionOfText">2. Especificação da visão do Mashup sobre a Ontologia:</b> 
+            <b class="subSectionOfText">2. Especificação da visão do Mashup sobre a Ontologia de Dominio:</b> 
             <br>
+            <ul>
+            <b class="subSectionOfText">
+                2.1 Consulta de Especificação da Visão do Mashup
+            </b> 
+
             <pre>
 	<b>SELECT</b> *
 	<b>WHERE</b> {
@@ -53,22 +59,26 @@
 	    <b>FILTER</b> (?diasVividos < 28)
 	}
             </pre>
+
+
+            <b class="subSectionOfText">
+                2.2 Ontologia da Visão do Mashup
+            </b>        
+            <div class="textForRead">
+                <ul>
+                    <a href="img/ontoMashup.png">Representação visual da ontologia da Visão do Mashup</a>
+                </ul>
+            </div>
+            </ul>
         </div>
         <hr/>
         <b class="subSectionOfText">3. Especificação da visão do Mashup sobre as Fontes de Dados:</b>  
         <br>
 		<ul style="list-style-type: none; ">
-        <b class="subSectionOfText">
-            3.1 Ontologia da Visão do Mashup
-        </b>        
-        <div class="textForRead">
-            <ul>
-                <a href="img/ontoMashup.png">Representação visual da ontologia de Dominio</a>
-            </ul>
-        </div>
+  
 
         <b class="subSectionOfText">
-            3.2 Bases Utilizadas
+            3.1 Fontes de Dados Utilizadas pelo Mashup
         </b>
         
                 
@@ -83,17 +93,26 @@
 
 
         <b class="subSectionOfText">
-            3.3 Visões Exportadas
+            3.2 Visões Exportadas
         </b>
         <div class="textForRead">
         <ul>
 	        <li>	
+                <!-- TODO ontologia --> 
 	            <div class="subSectionOfText"> 
-                    Visão Exportada SIM (<i>E'<sub><small>SIM</small></sub></i>) -
-	            <a href="https://www.dropbox.com/s/pqglynt54j5k984/sbcas_sim_r.ttl?dl=1" download>
-	                Download Mapeamentos R2RML
-	            </a>
+                    Visão Exportada SIM (<i>E<sub><small>SIM</small></sub></i>)
                 </div>
+                <ul>
+	               <li>   
+                     <a href="https://www.dropbox.com/s/pqglynt54j5k984/sbcas_sim_r.ttl?dl=1" download>Download Mapeamentos R2RML</a>
+                    </li>
+                    <li>
+                      <a href="img/o_esim.png">
+                            Representação visual da Ontologia Local 
+                        </a>       
+                    </li>
+                </ul>
+                
 	        </li>
         <!--
         <p>Representação visual da Ontologia Local <i> O<sub><small>SIM</small></sub></i>:</p>
@@ -104,12 +123,22 @@
 	        <li>  
 	        	
 	        	<div class="subSectionOfText"> 
-                    Visão Exportada SINASC (<i>E'<sub><small>SINASC</small></sub></i>) -
-    	           <a href="https://www.dropbox.com/s/e35fmwg181syhbf/sbcas_sinasc_r.ttl?dl=1" download>
-	           	   	   Download Mapeamentos R2RML
-    	           </a>
+                    Visão Exportada SINASC (<i>E<sub><small>SINASC</small></sub></i>)
                 </div>
-	        	
+    	        <ul>   
+                   <li>
+                       <a href="https://www.dropbox.com/s/e35fmwg181syhbf/sbcas_sinasc_r.ttl?dl=1" download>
+    	           	   	   Download Mapeamentos R2RML
+        	           </a>
+                   </li>
+                   <li>
+                      <a href="img/o_esinasc.png">
+                            Representação visual da Ontologia Local 
+                        </a>       
+                    </li>
+                       
+                </ul>
+                
 	        </li>
     	</ul>
         </div>
@@ -120,7 +149,7 @@
     	-->
 
         <b class="subSectionOfText">
-            3.4 Regras de Linkage
+            3.3 Regras de Linkage
         </b>
         <div class="textForRead">
             <ul>
@@ -136,7 +165,7 @@
     	-->
 
         <b class="subSectionOfText">
-            3.5 Regras de Fusão
+            3.4 Regras de Fusão
         </b>
         <div class="textForRead">
             <ul>
