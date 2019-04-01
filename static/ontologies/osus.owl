@@ -1,0 +1,190 @@
+Prefix(:=<#>)
+Prefix(owl:=<http://www.w3.org/2002/07/owl#>)
+Prefix(rdf:=<http://www.w3.org/1999/02/22-rdf-syntax-ns#>)
+Prefix(xml:=<http://www.w3.org/XML/1998/namespace>)
+Prefix(xsd:=<http://www.w3.org/2001/XMLSchema#>)
+Prefix(osus:=<http://200.19.182.252/ontology#>)
+Prefix(rdfs:=<http://www.w3.org/2000/01/rdf-schema#>)
+
+
+Ontology(
+Declaration(Class(osus:CausaDaMorte))
+Declaration(Class(osus:Gestacao))
+Declaration(Class(osus:Mae))
+Declaration(Class(osus:Nascimento))
+Declaration(Class(osus:Obito))
+Declaration(Class(osus:Parto))
+Declaration(Class(osus:PartoCesareo))
+Declaration(Class(osus:PartoVaginal))
+Declaration(Class(osus:Pessoa))
+Declaration(Class(osus:PessoaMorta))
+Declaration(Class(osus:RN))
+Declaration(ObjectProperty(osus:causaDaMorte))
+Declaration(ObjectProperty(osus:gestacao))
+Declaration(ObjectProperty(osus:gestante))
+Declaration(ObjectProperty(osus:infoNasc))
+Declaration(ObjectProperty(osus:obito))
+Declaration(ObjectProperty(osus:parto))
+Declaration(ObjectProperty(osus:temMae))
+Declaration(DataProperty(osus:apgarPrimeiroMinuto))
+Declaration(DataProperty(osus:apgarQuintoMinuto))
+Declaration(DataProperty(osus:cid))
+Declaration(DataProperty(osus:cns))
+Declaration(DataProperty(osus:dataAtestadoDeObito))
+Declaration(DataProperty(osus:dataDoObito))
+Declaration(DataProperty(osus:dataNascimento))
+Declaration(DataProperty(osus:diasVividos))
+Declaration(DataProperty(osus:horaDoObito))
+Declaration(DataProperty(osus:idade))
+Declaration(DataProperty(osus:nomeCompleto))
+Declaration(DataProperty(osus:numDecNascVivo))
+Declaration(DataProperty(osus:pesoAoNascer))
+Declaration(DataProperty(osus:qtdNascMortos))
+Declaration(DataProperty(osus:sexo))
+Declaration(DataProperty(osus:tempoDeDuracao))
+Declaration(DataProperty(osus:tempoDeGestacao))
+############################
+#   Object Properties
+############################
+
+# Object Property: osus:causaDaMorte (osus:causaDaMorte)
+
+ObjectPropertyDomain(osus:causaDaMorte osus:Obito)
+ObjectPropertyRange(osus:causaDaMorte osus:CausaDaMorte)
+
+# Object Property: osus:gestacao (osus:gestacao)
+
+ObjectPropertyDomain(osus:gestacao osus:Parto)
+ObjectPropertyRange(osus:gestacao osus:Gestacao)
+
+# Object Property: osus:gestante (osus:gestante)
+
+ObjectPropertyDomain(osus:gestante osus:Gestacao)
+ObjectPropertyRange(osus:gestante osus:Mae)
+
+# Object Property: osus:infoNasc (osus:infoNasc)
+
+ObjectPropertyDomain(osus:infoNasc osus:RN)
+ObjectPropertyRange(osus:infoNasc osus:Nascimento)
+
+# Object Property: osus:obito (osus:obito)
+
+ObjectPropertyDomain(osus:obito osus:PessoaMorta)
+ObjectPropertyRange(osus:obito osus:Obito)
+
+# Object Property: osus:parto (osus:parto)
+
+ObjectPropertyDomain(osus:parto osus:Nascimento)
+ObjectPropertyRange(osus:parto osus:Parto)
+
+# Object Property: osus:temMae (osus:temMae)
+
+ObjectPropertyDomain(osus:temMae osus:Pessoa)
+ObjectPropertyRange(osus:temMae osus:Mae)
+
+
+############################
+#   Data Properties
+############################
+
+# Data Property: osus:apgarPrimeiroMinuto (osus:apgarPrimeiroMinuto)
+
+DataPropertyDomain(osus:apgarPrimeiroMinuto osus:Nascimento)
+
+# Data Property: osus:apgarQuintoMinuto (osus:apgarQuintoMinuto)
+
+DataPropertyDomain(osus:apgarQuintoMinuto osus:Nascimento)
+
+# Data Property: osus:cid (osus:cid)
+
+DataPropertyDomain(osus:cid osus:CausaDaMorte)
+
+# Data Property: osus:cns (osus:cns)
+
+DataPropertyDomain(osus:cns osus:Pessoa)
+
+# Data Property: osus:dataAtestadoDeObito (osus:dataAtestadoDeObito)
+
+DataPropertyDomain(osus:dataAtestadoDeObito osus:Obito)
+
+# Data Property: osus:dataDoObito (osus:dataDoObito)
+
+DataPropertyDomain(osus:dataDoObito osus:Obito)
+
+# Data Property: osus:dataNascimento (osus:dataNascimento)
+
+DataPropertyDomain(osus:dataNascimento osus:Pessoa)
+
+# Data Property: osus:diasVividos (osus:diasVividos)
+
+DataPropertyDomain(osus:diasVividos osus:PessoaMorta)
+
+# Data Property: osus:horaDoObito (osus:horaDoObito)
+
+DataPropertyDomain(osus:horaDoObito osus:Obito)
+
+# Data Property: osus:idade (osus:idade)
+
+DataPropertyDomain(osus:idade osus:Mae)
+
+# Data Property: osus:nomeCompleto (osus:nomeCompleto)
+
+DataPropertyDomain(osus:nomeCompleto osus:Pessoa)
+
+# Data Property: osus:numDecNascVivo (osus:numDecNascVivo)
+
+DataPropertyDomain(osus:numDecNascVivo osus:RN)
+
+# Data Property: osus:pesoAoNascer (osus:pesoAoNascer)
+
+DataPropertyDomain(osus:pesoAoNascer osus:Nascimento)
+
+# Data Property: osus:qtdNascMortos (osus:qtdNascMortos)
+
+DataPropertyDomain(osus:qtdNascMortos osus:Mae)
+
+# Data Property: osus:sexo (osus:sexo)
+
+DataPropertyDomain(osus:sexo osus:Pessoa)
+DataPropertyRange(osus:sexo xsd:string)
+
+# Data Property: osus:tempoDeDuracao (osus:tempoDeDuracao)
+
+DataPropertyDomain(osus:tempoDeDuracao osus:CausaDaMorte)
+
+# Data Property: osus:tempoDeGestacao (osus:tempoDeGestacao)
+
+DataPropertyDomain(osus:tempoDeGestacao osus:Gestacao)
+
+# Data Property: owl:topDataProperty (owl:topDataProperty)
+
+SubDataPropertyOf(owl:topDataProperty owl:topDataProperty)
+
+
+
+############################
+#   Classes
+############################
+
+# Class: osus:Mae (osus:Mae)
+
+SubClassOf(osus:Mae osus:Pessoa)
+
+# Class: osus:PartoCesareo (osus:PartoCesareo)
+
+SubClassOf(osus:PartoCesareo osus:Parto)
+
+# Class: osus:PartoVaginal (osus:PartoVaginal)
+
+SubClassOf(osus:PartoVaginal osus:Parto)
+
+# Class: osus:PessoaMorta (osus:PessoaMorta)
+
+SubClassOf(osus:PessoaMorta osus:Pessoa)
+
+# Class: osus:RN (osus:RN)
+
+SubClassOf(osus:RN osus:Pessoa)
+
+
+)
