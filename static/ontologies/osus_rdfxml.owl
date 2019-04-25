@@ -107,10 +107,6 @@
     <rdfs:domain rdf:resource="http://200.19.182.252/ontology#Gestacao"/>
   </owl:DatatypeProperty>
 
-  <rdf:Description rdf:about="http://www.w3.org/2002/07/owl#topDataProperty">
-    <rdfs:subPropertyOf rdf:resource="http://www.w3.org/2002/07/owl#topDataProperty"/>
-  </rdf:Description>
-
   <owl:Class rdf:about="http://200.19.182.252/ontology#CausaDaMorte">
   </owl:Class>
 
