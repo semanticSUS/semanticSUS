@@ -1,332 +1,155 @@
-<?xml version="1.0"?>
-<rdf:RDF xmlns="#"
-     xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
-     xmlns:owl="http://www.w3.org/2002/07/owl#"
-     xmlns:osus="http://200.19.182.252/ontology#"
-     xmlns:xml="http://www.w3.org/XML/1998/namespace"
-     xmlns:xsd="http://www.w3.org/2001/XMLSchema#"
-     xmlns:rdfs="http://www.w3.org/2000/01/rdf-schema#">
-    <owl:Ontology/>
-    
+<?xml version="1.0" encoding="utf-8" ?>
+<rdf:RDF xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
+         xmlns:owl="http://www.w3.org/2002/07/owl#"
+         xmlns:rdfs="http://www.w3.org/2000/01/rdf-schema#">
+
+  <owl:ObjectProperty rdf:about="http://200.19.182.252/ontology#causaDaMorte">
+    <rdfs:domain rdf:resource="http://200.19.182.252/ontology#Obito"/>
+    <rdfs:range rdf:resource="http://200.19.182.252/ontology#CausaDaMorte"/>
+  </owl:ObjectProperty>
+
+  <owl:ObjectProperty rdf:about="http://200.19.182.252/ontology#gestacao">
+    <rdfs:domain rdf:resource="http://200.19.182.252/ontology#Parto"/>
+    <rdfs:range rdf:resource="http://200.19.182.252/ontology#Gestacao"/>
+  </owl:ObjectProperty>
+
+  <owl:ObjectProperty rdf:about="http://200.19.182.252/ontology#gestante">
+    <rdfs:domain rdf:resource="http://200.19.182.252/ontology#Gestacao"/>
+    <rdfs:range rdf:resource="http://200.19.182.252/ontology#Mae"/>
+  </owl:ObjectProperty>
+
+  <owl:ObjectProperty rdf:about="http://200.19.182.252/ontology#infoNasc">
+    <rdfs:domain rdf:resource="http://200.19.182.252/ontology#RN"/>
+    <rdfs:range rdf:resource="http://200.19.182.252/ontology#Nascimento"/>
+  </owl:ObjectProperty>
+
+  <owl:ObjectProperty rdf:about="http://200.19.182.252/ontology#obito">
+    <rdfs:domain rdf:resource="http://200.19.182.252/ontology#PessoaMorta"/>
+    <rdfs:range rdf:resource="http://200.19.182.252/ontology#Obito"/>
+  </owl:ObjectProperty>
+
+  <owl:ObjectProperty rdf:about="http://200.19.182.252/ontology#parto">
+    <rdfs:domain rdf:resource="http://200.19.182.252/ontology#Nascimento"/>
+    <rdfs:range rdf:resource="http://200.19.182.252/ontology#Parto"/>
+  </owl:ObjectProperty>
+
+  <owl:ObjectProperty rdf:about="http://200.19.182.252/ontology#temMae">
+    <rdfs:domain rdf:resource="http://200.19.182.252/ontology#Pessoa"/>
+    <rdfs:range rdf:resource="http://200.19.182.252/ontology#Mae"/>
+  </owl:ObjectProperty>
+
+  <owl:DatatypeProperty rdf:about="http://200.19.182.252/ontology#apgarPrimeiroMinuto">
+    <rdfs:domain rdf:resource="http://200.19.182.252/ontology#Nascimento"/>
+  </owl:DatatypeProperty>
+
+  <owl:DatatypeProperty rdf:about="http://200.19.182.252/ontology#apgarQuintoMinuto">
+    <rdfs:domain rdf:resource="http://200.19.182.252/ontology#Nascimento"/>
+  </owl:DatatypeProperty>
+
+  <owl:DatatypeProperty rdf:about="http://200.19.182.252/ontology#cid">
+    <rdfs:domain rdf:resource="http://200.19.182.252/ontology#CausaDaMorte"/>
+  </owl:DatatypeProperty>
+
+  <owl:DatatypeProperty rdf:about="http://200.19.182.252/ontology#cns">
+    <rdfs:domain rdf:resource="http://200.19.182.252/ontology#Pessoa"/>
+  </owl:DatatypeProperty>
+
+  <owl:DatatypeProperty rdf:about="http://200.19.182.252/ontology#dataAtestadoDeObito">
+    <rdfs:domain rdf:resource="http://200.19.182.252/ontology#Obito"/>
+  </owl:DatatypeProperty>
+
+  <owl:DatatypeProperty rdf:about="http://200.19.182.252/ontology#dataDoObito">
+    <rdfs:domain rdf:resource="http://200.19.182.252/ontology#Obito"/>
+  </owl:DatatypeProperty>
+
+  <owl:DatatypeProperty rdf:about="http://200.19.182.252/ontology#dataNascimento">
+    <rdfs:domain rdf:resource="http://200.19.182.252/ontology#Pessoa"/>
+  </owl:DatatypeProperty>
+
+  <owl:DatatypeProperty rdf:about="http://200.19.182.252/ontology#diasVividos">
+    <rdfs:domain rdf:resource="http://200.19.182.252/ontology#PessoaMorta"/>
+  </owl:DatatypeProperty>
+
+  <owl:DatatypeProperty rdf:about="http://200.19.182.252/ontology#horaDoObito">
+    <rdfs:domain rdf:resource="http://200.19.182.252/ontology#Obito"/>
+  </owl:DatatypeProperty>
+
+  <owl:DatatypeProperty rdf:about="http://200.19.182.252/ontology#idade">
+    <rdfs:domain rdf:resource="http://200.19.182.252/ontology#Mae"/>
+  </owl:DatatypeProperty>
+
+  <owl:DatatypeProperty rdf:about="http://200.19.182.252/ontology#nomeCompleto">
+    <rdfs:domain rdf:resource="http://200.19.182.252/ontology#Pessoa"/>
+  </owl:DatatypeProperty>
+
+  <owl:DatatypeProperty rdf:about="http://200.19.182.252/ontology#numDecNascVivo">
+    <rdfs:domain rdf:resource="http://200.19.182.252/ontology#RN"/>
+  </owl:DatatypeProperty>
+
+  <owl:DatatypeProperty rdf:about="http://200.19.182.252/ontology#pesoAoNascer">
+    <rdfs:domain rdf:resource="http://200.19.182.252/ontology#Nascimento"/>
+  </owl:DatatypeProperty>
+
+  <owl:DatatypeProperty rdf:about="http://200.19.182.252/ontology#qtdNascMortos">
+    <rdfs:domain rdf:resource="http://200.19.182.252/ontology#Mae"/>
+  </owl:DatatypeProperty>
+
+  <owl:DatatypeProperty rdf:about="http://200.19.182.252/ontology#sexo">
+    <rdfs:domain rdf:resource="http://200.19.182.252/ontology#Pessoa"/>
+    <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+  </owl:DatatypeProperty>
+
+  <owl:DatatypeProperty rdf:about="http://200.19.182.252/ontology#tempoDeDuracao">
+    <rdfs:domain rdf:resource="http://200.19.182.252/ontology#CausaDaMorte"/>
+  </owl:DatatypeProperty>
 
+  <owl:DatatypeProperty rdf:about="http://200.19.182.252/ontology#tempoDeGestacao">
+    <rdfs:domain rdf:resource="http://200.19.182.252/ontology#Gestacao"/>
+  </owl:DatatypeProperty>
 
-    <!-- 
-    ///////////////////////////////////////////////////////////////////////////////////////
-    //
-    // Object Properties
-    //
-    ///////////////////////////////////////////////////////////////////////////////////////
-     -->
+  <rdf:Description rdf:about="http://www.w3.org/2002/07/owl#topDataProperty">
+    <rdfs:subPropertyOf rdf:resource="http://www.w3.org/2002/07/owl#topDataProperty"/>
+  </rdf:Description>
 
-    
+  <owl:Class rdf:about="http://200.19.182.252/ontology#CausaDaMorte">
+  </owl:Class>
 
+  <owl:Class rdf:about="http://200.19.182.252/ontology#Gestacao">
+  </owl:Class>
 
-    <!-- http://200.19.182.252/ontology#causaDaMorte -->
+  <owl:Class rdf:about="http://200.19.182.252/ontology#Mae">
+    <rdfs:subClassOf rdf:resource="http://200.19.182.252/ontology#Pessoa"/>
+  </owl:Class>
 
-    <owl:ObjectProperty rdf:about="http://200.19.182.252/ontology#causaDaMorte">
-        <rdfs:domain rdf:resource="http://200.19.182.252/ontology#Obito"/>
-        <rdfs:range rdf:resource="http://200.19.182.252/ontology#CausaDaMorte"/>
-    </owl:ObjectProperty>
-    
+  <owl:Class rdf:about="http://200.19.182.252/ontology#Nascimento">
+  </owl:Class>
 
+  <owl:Class rdf:about="http://200.19.182.252/ontology#Obito">
+  </owl:Class>
 
-    <!-- http://200.19.182.252/ontology#gestacao -->
+  <owl:Class rdf:about="http://200.19.182.252/ontology#Parto">
+  </owl:Class>
 
-    <owl:ObjectProperty rdf:about="http://200.19.182.252/ontology#gestacao">
-        <rdfs:domain rdf:resource="http://200.19.182.252/ontology#Parto"/>
-        <rdfs:range rdf:resource="http://200.19.182.252/ontology#Gestacao"/>
-    </owl:ObjectProperty>
-    
+  <owl:Class rdf:about="http://200.19.182.252/ontology#PartoCesareo">
+    <rdfs:subClassOf rdf:resource="http://200.19.182.252/ontology#Parto"/>
+  </owl:Class>
 
+  <owl:Class rdf:about="http://200.19.182.252/ontology#PartoVaginal">
+    <rdfs:subClassOf rdf:resource="http://200.19.182.252/ontology#Parto"/>
+  </owl:Class>
 
-    <!-- http://200.19.182.252/ontology#gestante -->
+  <owl:Class rdf:about="http://200.19.182.252/ontology#Pessoa">
+  </owl:Class>
 
-    <owl:ObjectProperty rdf:about="http://200.19.182.252/ontology#gestante">
-        <rdfs:domain rdf:resource="http://200.19.182.252/ontology#Gestacao"/>
-        <rdfs:range rdf:resource="http://200.19.182.252/ontology#Mae"/>
-    </owl:ObjectProperty>
-    
+  <owl:Class rdf:about="http://200.19.182.252/ontology#PessoaMorta">
+    <rdfs:subClassOf rdf:resource="http://200.19.182.252/ontology#Pessoa"/>
+  </owl:Class>
 
+  <owl:Class rdf:about="http://200.19.182.252/ontology#RN">
+    <rdfs:subClassOf rdf:resource="http://200.19.182.252/ontology#Pessoa"/>
+  </owl:Class>
 
-    <!-- http://200.19.182.252/ontology#infoNasc -->
+  <owl:Ontology rdf:nodeID="genid1">
+  </owl:Ontology>
 
-    <owl:ObjectProperty rdf:about="http://200.19.182.252/ontology#infoNasc">
-        <rdfs:domain rdf:resource="http://200.19.182.252/ontology#RN"/>
-        <rdfs:range rdf:resource="http://200.19.182.252/ontology#Nascimento"/>
-    </owl:ObjectProperty>
-    
-
-
-    <!-- http://200.19.182.252/ontology#obito -->
-
-    <owl:ObjectProperty rdf:about="http://200.19.182.252/ontology#obito">
-        <rdfs:domain rdf:resource="http://200.19.182.252/ontology#PessoaMorta"/>
-        <rdfs:range rdf:resource="http://200.19.182.252/ontology#Obito"/>
-    </owl:ObjectProperty>
-    
-
-
-    <!-- http://200.19.182.252/ontology#parto -->
-
-    <owl:ObjectProperty rdf:about="http://200.19.182.252/ontology#parto">
-        <rdfs:domain rdf:resource="http://200.19.182.252/ontology#Nascimento"/>
-        <rdfs:range rdf:resource="http://200.19.182.252/ontology#Parto"/>
-    </owl:ObjectProperty>
-    
-
-
-    <!-- http://200.19.182.252/ontology#temMae -->
-
-    <owl:ObjectProperty rdf:about="http://200.19.182.252/ontology#temMae">
-        <rdfs:domain rdf:resource="http://200.19.182.252/ontology#Pessoa"/>
-        <rdfs:range rdf:resource="http://200.19.182.252/ontology#Mae"/>
-    </owl:ObjectProperty>
-    
-
-
-    <!-- 
-    ///////////////////////////////////////////////////////////////////////////////////////
-    //
-    // Data properties
-    //
-    ///////////////////////////////////////////////////////////////////////////////////////
-     -->
-
-    
-
-
-    <!-- http://200.19.182.252/ontology#apgarPrimeiroMinuto -->
-
-    <owl:DatatypeProperty rdf:about="http://200.19.182.252/ontology#apgarPrimeiroMinuto">
-        <rdfs:domain rdf:resource="http://200.19.182.252/ontology#Nascimento"/>
-    </owl:DatatypeProperty>
-    
-
-
-    <!-- http://200.19.182.252/ontology#apgarQuintoMinuto -->
-
-    <owl:DatatypeProperty rdf:about="http://200.19.182.252/ontology#apgarQuintoMinuto">
-        <rdfs:domain rdf:resource="http://200.19.182.252/ontology#Nascimento"/>
-    </owl:DatatypeProperty>
-    
-
-
-    <!-- http://200.19.182.252/ontology#cid -->
-
-    <owl:DatatypeProperty rdf:about="http://200.19.182.252/ontology#cid">
-        <rdfs:domain rdf:resource="http://200.19.182.252/ontology#CausaDaMorte"/>
-    </owl:DatatypeProperty>
-    
-
-
-    <!-- http://200.19.182.252/ontology#cns -->
-
-    <owl:DatatypeProperty rdf:about="http://200.19.182.252/ontology#cns">
-        <rdfs:domain rdf:resource="http://200.19.182.252/ontology#Pessoa"/>
-    </owl:DatatypeProperty>
-    
-
-
-    <!-- http://200.19.182.252/ontology#dataAtestadoDeObito -->
-
-    <owl:DatatypeProperty rdf:about="http://200.19.182.252/ontology#dataAtestadoDeObito">
-        <rdfs:domain rdf:resource="http://200.19.182.252/ontology#Obito"/>
-    </owl:DatatypeProperty>
-    
-
-
-    <!-- http://200.19.182.252/ontology#dataDoObito -->
-
-    <owl:DatatypeProperty rdf:about="http://200.19.182.252/ontology#dataDoObito">
-        <rdfs:domain rdf:resource="http://200.19.182.252/ontology#Obito"/>
-    </owl:DatatypeProperty>
-    
-
-
-    <!-- http://200.19.182.252/ontology#dataNascimento -->
-
-    <owl:DatatypeProperty rdf:about="http://200.19.182.252/ontology#dataNascimento">
-        <rdfs:domain rdf:resource="http://200.19.182.252/ontology#Pessoa"/>
-    </owl:DatatypeProperty>
-    
-
-
-    <!-- http://200.19.182.252/ontology#diasVividos -->
-
-    <owl:DatatypeProperty rdf:about="http://200.19.182.252/ontology#diasVividos">
-        <rdfs:domain rdf:resource="http://200.19.182.252/ontology#PessoaMorta"/>
-    </owl:DatatypeProperty>
-    
-
-
-    <!-- http://200.19.182.252/ontology#horaDoObito -->
-
-    <owl:DatatypeProperty rdf:about="http://200.19.182.252/ontology#horaDoObito">
-        <rdfs:domain rdf:resource="http://200.19.182.252/ontology#Obito"/>
-    </owl:DatatypeProperty>
-    
-
-
-    <!-- http://200.19.182.252/ontology#idade -->
-
-    <owl:DatatypeProperty rdf:about="http://200.19.182.252/ontology#idade">
-        <rdfs:domain rdf:resource="http://200.19.182.252/ontology#Mae"/>
-    </owl:DatatypeProperty>
-    
-
-
-    <!-- http://200.19.182.252/ontology#nomeCompleto -->
-
-    <owl:DatatypeProperty rdf:about="http://200.19.182.252/ontology#nomeCompleto">
-        <rdfs:domain rdf:resource="http://200.19.182.252/ontology#Pessoa"/>
-    </owl:DatatypeProperty>
-    
-
-
-    <!-- http://200.19.182.252/ontology#numDecNascVivo -->
-
-    <owl:DatatypeProperty rdf:about="http://200.19.182.252/ontology#numDecNascVivo">
-        <rdfs:domain rdf:resource="http://200.19.182.252/ontology#RN"/>
-    </owl:DatatypeProperty>
-    
-
-
-    <!-- http://200.19.182.252/ontology#pesoAoNascer -->
-
-    <owl:DatatypeProperty rdf:about="http://200.19.182.252/ontology#pesoAoNascer">
-        <rdfs:domain rdf:resource="http://200.19.182.252/ontology#Nascimento"/>
-    </owl:DatatypeProperty>
-    
-
-
-    <!-- http://200.19.182.252/ontology#qtdNascMortos -->
-
-    <owl:DatatypeProperty rdf:about="http://200.19.182.252/ontology#qtdNascMortos">
-        <rdfs:domain rdf:resource="http://200.19.182.252/ontology#Mae"/>
-    </owl:DatatypeProperty>
-    
-
-
-    <!-- http://200.19.182.252/ontology#sexo -->
-
-    <owl:DatatypeProperty rdf:about="http://200.19.182.252/ontology#sexo">
-        <rdfs:domain rdf:resource="http://200.19.182.252/ontology#Pessoa"/>
-        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
-    </owl:DatatypeProperty>
-    
-
-
-    <!-- http://200.19.182.252/ontology#tempoDeDuracao -->
-
-    <owl:DatatypeProperty rdf:about="http://200.19.182.252/ontology#tempoDeDuracao">
-        <rdfs:domain rdf:resource="http://200.19.182.252/ontology#CausaDaMorte"/>
-    </owl:DatatypeProperty>
-    
-
-
-    <!-- http://200.19.182.252/ontology#tempoDeGestacao -->
-
-    <owl:DatatypeProperty rdf:about="http://200.19.182.252/ontology#tempoDeGestacao">
-        <rdfs:domain rdf:resource="http://200.19.182.252/ontology#Gestacao"/>
-    </owl:DatatypeProperty>
-    
-
-
-    <!-- http://www.w3.org/2002/07/owl#topDataProperty -->
-
-    <rdf:Description rdf:about="http://www.w3.org/2002/07/owl#topDataProperty">
-        <rdfs:subPropertyOf rdf:resource="http://www.w3.org/2002/07/owl#topDataProperty"/>
-    </rdf:Description>
-    
-
-
-    <!-- 
-    ///////////////////////////////////////////////////////////////////////////////////////
-    //
-    // Classes
-    //
-    ///////////////////////////////////////////////////////////////////////////////////////
-     -->
-
-    
-
-
-    <!-- http://200.19.182.252/ontology#CausaDaMorte -->
-
-    <owl:Class rdf:about="http://200.19.182.252/ontology#CausaDaMorte"/>
-    
-
-
-    <!-- http://200.19.182.252/ontology#Gestacao -->
-
-    <owl:Class rdf:about="http://200.19.182.252/ontology#Gestacao"/>
-    
-
-
-    <!-- http://200.19.182.252/ontology#Mae -->
-
-    <owl:Class rdf:about="http://200.19.182.252/ontology#Mae">
-        <rdfs:subClassOf rdf:resource="http://200.19.182.252/ontology#Pessoa"/>
-    </owl:Class>
-    
-
-
-    <!-- http://200.19.182.252/ontology#Nascimento -->
-
-    <owl:Class rdf:about="http://200.19.182.252/ontology#Nascimento"/>
-    
-
-
-    <!-- http://200.19.182.252/ontology#Obito -->
-
-    <owl:Class rdf:about="http://200.19.182.252/ontology#Obito"/>
-    
-
-
-    <!-- http://200.19.182.252/ontology#Parto -->
-
-    <owl:Class rdf:about="http://200.19.182.252/ontology#Parto"/>
-    
-
-
-    <!-- http://200.19.182.252/ontology#PartoCesareo -->
-
-    <owl:Class rdf:about="http://200.19.182.252/ontology#PartoCesareo">
-        <rdfs:subClassOf rdf:resource="http://200.19.182.252/ontology#Parto"/>
-    </owl:Class>
-    
-
-
-    <!-- http://200.19.182.252/ontology#PartoVaginal -->
-
-    <owl:Class rdf:about="http://200.19.182.252/ontology#PartoVaginal">
-        <rdfs:subClassOf rdf:resource="http://200.19.182.252/ontology#Parto"/>
-    </owl:Class>
-    
-
-
-    <!-- http://200.19.182.252/ontology#Pessoa -->
-
-    <owl:Class rdf:about="http://200.19.182.252/ontology#Pessoa"/>
-    
-
-
-    <!-- http://200.19.182.252/ontology#PessoaMorta -->
-
-    <owl:Class rdf:about="http://200.19.182.252/ontology#PessoaMorta">
-        <rdfs:subClassOf rdf:resource="http://200.19.182.252/ontology#Pessoa"/>
-    </owl:Class>
-    
-
-
-    <!-- http://200.19.182.252/ontology#RN -->
-
-    <owl:Class rdf:about="http://200.19.182.252/ontology#RN">
-        <rdfs:subClassOf rdf:resource="http://200.19.182.252/ontology#Pessoa"/>
-    </owl:Class>
 </rdf:RDF>
-
-
-
-<!-- Generated by the OWL API (version 4.2.6.20160910-2108) https://github.com/owlcs/owlapi -->
-
