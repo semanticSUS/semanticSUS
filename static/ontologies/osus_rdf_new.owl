@@ -1,3 +1,4 @@
+@prefix : <#> .
 @prefix owl: <http://www.w3.org/2002/07/owl#> .
 @prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
 @prefix xml: <http://www.w3.org/XML/1998/namespace> .
@@ -15,50 +16,43 @@
 ###  http://200.19.182.252/ontology#causaDaMorte
 <http://200.19.182.252/ontology#causaDaMorte> rdf:type owl:ObjectProperty ;
                                               rdfs:domain <http://200.19.182.252/ontology#Obito> ;
-                                              rdfs:range <http://200.19.182.252/ontology#CausaDaMorte> ;
-                                              rdfs:label "causa da morte"^^xsd:string .
+                                              rdfs:range <http://200.19.182.252/ontology#CausaDaMorte> .
 
 
 ###  http://200.19.182.252/ontology#gestacao
 <http://200.19.182.252/ontology#gestacao> rdf:type owl:ObjectProperty ;
                                           rdfs:domain <http://200.19.182.252/ontology#Parto> ;
-                                          rdfs:range <http://200.19.182.252/ontology#Gestacao> ;
-                                          rdfs:label "gestação"^^xsd:string .
+                                          rdfs:range <http://200.19.182.252/ontology#Gestacao> .
 
 
 ###  http://200.19.182.252/ontology#gestante
 <http://200.19.182.252/ontology#gestante> rdf:type owl:ObjectProperty ;
                                           rdfs:domain <http://200.19.182.252/ontology#Gestacao> ;
-                                          rdfs:range <http://200.19.182.252/ontology#Mae> ;
-                                          rdfs:label "gestante"^^xsd:string .
+                                          rdfs:range <http://200.19.182.252/ontology#Mae> .
 
 
 ###  http://200.19.182.252/ontology#infoNasc
 <http://200.19.182.252/ontology#infoNasc> rdf:type owl:ObjectProperty ;
                                           rdfs:domain <http://200.19.182.252/ontology#RN> ;
-                                          rdfs:range <http://200.19.182.252/ontology#Nascimento> ;
-                                          rdfs:label "informações do nascimento"^^xsd:string .
+                                          rdfs:range <http://200.19.182.252/ontology#Nascimento> .
 
 
 ###  http://200.19.182.252/ontology#obito
 <http://200.19.182.252/ontology#obito> rdf:type owl:ObjectProperty ;
                                        rdfs:domain <http://200.19.182.252/ontology#PessoaMorta> ;
-                                       rdfs:range <http://200.19.182.252/ontology#Obito> ;
-                                       rdfs:label "óbito"^^xsd:string .
+                                       rdfs:range <http://200.19.182.252/ontology#Obito> .
 
 
 ###  http://200.19.182.252/ontology#parto
 <http://200.19.182.252/ontology#parto> rdf:type owl:ObjectProperty ;
                                        rdfs:domain <http://200.19.182.252/ontology#Nascimento> ;
-                                       rdfs:range <http://200.19.182.252/ontology#Parto> ;
-                                       rdfs:label "parto"^^xsd:string .
+                                       rdfs:range <http://200.19.182.252/ontology#Parto> .
 
 
 ###  http://200.19.182.252/ontology#temMae
 <http://200.19.182.252/ontology#temMae> rdf:type owl:ObjectProperty ;
                                         rdfs:domain <http://200.19.182.252/ontology#Pessoa> ;
-                                        rdfs:range <http://200.19.182.252/ontology#Mae> ;
-                                        rdfs:label "tem mãe"^^xsd:string .
+                                        rdfs:range <http://200.19.182.252/ontology#Mae> .
 
 
 #################################################################
@@ -67,121 +61,93 @@
 
 ###  http://200.19.182.252/ontology#apgarPrimeiroMinuto
 <http://200.19.182.252/ontology#apgarPrimeiroMinuto> rdf:type owl:DatatypeProperty ;
-                                                     rdfs:domain <http://200.19.182.252/ontology#Nascimento> ;
-                                                     rdfs:range xsd:int ;
-                                                     rdfs:label "apgar no primeiro minuto"^^xsd:string .
+                                                     rdfs:domain <http://200.19.182.252/ontology#Nascimento> .
 
 
 ###  http://200.19.182.252/ontology#apgarQuintoMinuto
 <http://200.19.182.252/ontology#apgarQuintoMinuto> rdf:type owl:DatatypeProperty ;
-                                                   rdfs:domain <http://200.19.182.252/ontology#Nascimento> ;
-                                                   rdfs:range xsd:int ;
-                                                   rdfs:label "apgar no quinto minuto"^^xsd:string .
+                                                   rdfs:domain <http://200.19.182.252/ontology#Nascimento> .
 
 
 ###  http://200.19.182.252/ontology#cid
 <http://200.19.182.252/ontology#cid> rdf:type owl:DatatypeProperty ;
-                                     rdfs:domain <http://200.19.182.252/ontology#CausaDaMorte> ;
-                                     rdfs:range xsd:string ;
-                                     rdfs:label "código internacional de doenças"^^xsd:string .
+                                     rdfs:domain <http://200.19.182.252/ontology#CausaDaMorte> .
 
 
 ###  http://200.19.182.252/ontology#cns
 <http://200.19.182.252/ontology#cns> rdf:type owl:DatatypeProperty ;
-                                     rdfs:domain <http://200.19.182.252/ontology#Pessoa> ;
-                                     rdfs:range xsd:string ;
-                                     rdfs:label "cartão nacional de saúde"^^xsd:string .
+                                     rdfs:domain <http://200.19.182.252/ontology#Pessoa> .
 
 
 ###  http://200.19.182.252/ontology#dataAtestadoDeObito
 <http://200.19.182.252/ontology#dataAtestadoDeObito> rdf:type owl:DatatypeProperty ;
-                                                     rdfs:domain <http://200.19.182.252/ontology#Obito> ;
-                                                     rdfs:range xsd:dateTime ;
-                                                     rdfs:label "data do atestado de óbito"^^xsd:string .
+                                                     rdfs:domain <http://200.19.182.252/ontology#Obito> .
 
 
 ###  http://200.19.182.252/ontology#dataDoObito
 <http://200.19.182.252/ontology#dataDoObito> rdf:type owl:DatatypeProperty ;
-                                             rdfs:domain <http://200.19.182.252/ontology#Obito> ;
-                                             rdfs:range xsd:dateTime ;
-                                             rdfs:label "data do óbito"^^xsd:string .
+                                             rdfs:domain <http://200.19.182.252/ontology#Obito> .
 
 
 ###  http://200.19.182.252/ontology#dataNascimento
 <http://200.19.182.252/ontology#dataNascimento> rdf:type owl:DatatypeProperty ;
-                                                rdfs:domain <http://200.19.182.252/ontology#Pessoa> ;
-                                                rdfs:range xsd:dateTime ;
-                                                rdfs:label "data de nascimento"^^xsd:string .
+                                                rdfs:domain <http://200.19.182.252/ontology#Pessoa> .
 
 
 ###  http://200.19.182.252/ontology#diasVividos
 <http://200.19.182.252/ontology#diasVividos> rdf:type owl:DatatypeProperty ;
                                              rdfs:domain <http://200.19.182.252/ontology#PessoaMorta> ;
-                                             rdfs:range xsd:integer ;
-                                             rdfs:label "dias vividos"^^xsd:string .
+                                             rdfs:range xsd:integer .
 
 
 ###  http://200.19.182.252/ontology#horaDoObito
 <http://200.19.182.252/ontology#horaDoObito> rdf:type owl:DatatypeProperty ;
-                                             rdfs:domain <http://200.19.182.252/ontology#Obito> ;
-                                             rdfs:range xsd:dateTime ;
-                                             rdfs:label "hora do óbito"^^xsd:string .
+                                             rdfs:domain <http://200.19.182.252/ontology#Obito> .
 
 
 ###  http://200.19.182.252/ontology#idade
 <http://200.19.182.252/ontology#idade> rdf:type owl:DatatypeProperty ;
-                                       rdfs:domain <http://200.19.182.252/ontology#Mae> ;
-                                       rdfs:range xsd:int ;
-                                       rdfs:label "idade"^^xsd:string .
+                                       rdfs:domain <http://200.19.182.252/ontology#Mae> .
 
 
 ###  http://200.19.182.252/ontology#nomeCompleto
 <http://200.19.182.252/ontology#nomeCompleto> rdf:type owl:DatatypeProperty ;
-                                              rdfs:domain <http://200.19.182.252/ontology#Pessoa> ;
-                                              rdfs:range xsd:string ;
-                                              rdfs:label "nome completo"^^xsd:string .
+                                              rdfs:domain <http://200.19.182.252/ontology#Pessoa> .
 
 
 ###  http://200.19.182.252/ontology#numDecNascVivo
 <http://200.19.182.252/ontology#numDecNascVivo> rdf:type owl:DatatypeProperty ;
-                                                rdfs:domain <http://200.19.182.252/ontology#RN> ;
-                                                rdfs:range xsd:string ;
-                                                rdfs:label "número de nascido vivo"^^xsd:string .
+                                                rdfs:domain <http://200.19.182.252/ontology#RN> .
 
 
 ###  http://200.19.182.252/ontology#pesoAoNascer
 <http://200.19.182.252/ontology#pesoAoNascer> rdf:type owl:DatatypeProperty ;
-                                              rdfs:domain <http://200.19.182.252/ontology#Nascimento> ;
-                                              rdfs:range xsd:float ;
-                                              rdfs:label "peso ao nascer"^^xsd:string .
+                                              rdfs:domain <http://200.19.182.252/ontology#Nascimento> .
 
 
 ###  http://200.19.182.252/ontology#qtdNascMortos
 <http://200.19.182.252/ontology#qtdNascMortos> rdf:type owl:DatatypeProperty ;
-                                               rdfs:domain <http://200.19.182.252/ontology#Mae> ;
-                                               rdfs:range xsd:int ;
-                                               rdfs:label "quantidade de nascidos mortos"^^xsd:string .
+                                               rdfs:domain <http://200.19.182.252/ontology#Mae> .
 
 
 ###  http://200.19.182.252/ontology#sexo
 <http://200.19.182.252/ontology#sexo> rdf:type owl:DatatypeProperty ;
                                       rdfs:domain <http://200.19.182.252/ontology#Pessoa> ;
-                                      rdfs:range xsd:string ;
-                                      rdfs:label "sexo"^^xsd:string .
+                                      rdfs:range xsd:string .
 
 
 ###  http://200.19.182.252/ontology#tempoDeDuracao
 <http://200.19.182.252/ontology#tempoDeDuracao> rdf:type owl:DatatypeProperty ;
-                                                rdfs:domain <http://200.19.182.252/ontology#CausaDaMorte> ;
-                                                rdfs:range xsd:string ;
-                                                rdfs:label "tempo de duração"^^xsd:string .
+                                                rdfs:domain <http://200.19.182.252/ontology#CausaDaMorte> .
 
 
 ###  http://200.19.182.252/ontology#tempoDeGestacao
 <http://200.19.182.252/ontology#tempoDeGestacao> rdf:type owl:DatatypeProperty ;
-                                                 rdfs:domain <http://200.19.182.252/ontology#Gestacao> ;
-                                                 rdfs:range xsd:string ;
-                                                 rdfs:label "tempo de gestação"^^xsd:string .
+                                                 rdfs:domain <http://200.19.182.252/ontology#Gestacao> .
+
+
+###  http://www.w3.org/2002/07/owl#topDataProperty
+owl:topDataProperty rdfs:subPropertyOf owl:topDataProperty .
 
 
 #################################################################
@@ -189,96 +155,52 @@
 #################################################################
 
 ###  http://200.19.182.252/ontology#CausaDaMorte
-<http://200.19.182.252/ontology#CausaDaMorte> rdf:type owl:Class ;
-                                              rdfs:label "Causa da Morte"^^xsd:string .
+<http://200.19.182.252/ontology#CausaDaMorte> rdf:type owl:Class .
 
 
 ###  http://200.19.182.252/ontology#Gestacao
-<http://200.19.182.252/ontology#Gestacao> rdf:type owl:Class ;
-                                          rdfs:subClassOf owl:Thing ;
-                                          rdfs:label "Gestação"^^xsd:string .
+<http://200.19.182.252/ontology#Gestacao> rdf:type owl:Class .
 
 
 ###  http://200.19.182.252/ontology#Mae
 <http://200.19.182.252/ontology#Mae> rdf:type owl:Class ;
-                                     rdfs:subClassOf <http://200.19.182.252/ontology#Pessoa> ;
-                                     rdfs:label "Mãe"^^xsd:string .
+                                     rdfs:subClassOf <http://200.19.182.252/ontology#Pessoa> .
 
 
 ###  http://200.19.182.252/ontology#Nascimento
-<http://200.19.182.252/ontology#Nascimento> rdf:type owl:Class ;
-                                            rdfs:label "Nascimento"^^xsd:string .
+<http://200.19.182.252/ontology#Nascimento> rdf:type owl:Class .
 
 
 ###  http://200.19.182.252/ontology#Obito
-<http://200.19.182.252/ontology#Obito> rdf:type owl:Class ;
-                                       rdfs:label "Óbito"^^xsd:string .
+<http://200.19.182.252/ontology#Obito> rdf:type owl:Class .
 
 
 ###  http://200.19.182.252/ontology#Parto
-<http://200.19.182.252/ontology#Parto> rdf:type owl:Class ;
-                                       rdfs:label "Parto"^^xsd:string .
+<http://200.19.182.252/ontology#Parto> rdf:type owl:Class .
 
 
 ###  http://200.19.182.252/ontology#PartoCesareo
 <http://200.19.182.252/ontology#PartoCesareo> rdf:type owl:Class ;
-                                              rdfs:subClassOf <http://200.19.182.252/ontology#Parto> ;
-                                              rdfs:label "Parto Cesáreo"^^xsd:string .
+                                              rdfs:subClassOf <http://200.19.182.252/ontology#Parto> .
 
 
 ###  http://200.19.182.252/ontology#PartoVaginal
 <http://200.19.182.252/ontology#PartoVaginal> rdf:type owl:Class ;
-                                              rdfs:subClassOf <http://200.19.182.252/ontology#Parto> ;
-                                              rdfs:label "Parto Vaginal"^^xsd:string .
+                                              rdfs:subClassOf <http://200.19.182.252/ontology#Parto> .
 
 
 ###  http://200.19.182.252/ontology#Pessoa
-<http://200.19.182.252/ontology#Pessoa> rdf:type owl:Class ;
-                                        rdfs:label "Pessoa"^^xsd:string .
+<http://200.19.182.252/ontology#Pessoa> rdf:type owl:Class .
 
 
 ###  http://200.19.182.252/ontology#PessoaMorta
 <http://200.19.182.252/ontology#PessoaMorta> rdf:type owl:Class ;
-                                             rdfs:subClassOf <http://200.19.182.252/ontology#Pessoa> ;
-                                             rdfs:label "Pessoa Morta"^^xsd:string .
+                                             rdfs:subClassOf <http://200.19.182.252/ontology#Pessoa> .
 
 
 ###  http://200.19.182.252/ontology#RN
 <http://200.19.182.252/ontology#RN> rdf:type owl:Class ;
-                                    rdfs:subClassOf <http://200.19.182.252/ontology#Pessoa> ;
-                                    rdfs:label "Recém-nascido"^^xsd:string .
+                                    rdfs:subClassOf <http://200.19.182.252/ontology#Pessoa> .
 
 
-###  http://200.19.182.252/ontology#NascidoComAsfixia
-<http://200.19.182.252/ontology#NascidoComAsfixia> rdf:type owl:Class ;
-                                                         rdfs:subClassOf <http://200.19.182.252/ontology#RN> ;
-                                                         rdfs:comment """O somatório da pontuação (no mínimo 0 e no máximo 10) resultará no Índice de Apgar e o recém-nascido será classificado como:
-sem asfixia (Apgar 8 a 10);
-com asfixia leve (Apgar 5 a 7);
-com asfixia moderada (Apgar 3 a 4) ou
-com asfixia grave: Apgar 0 a 2."""@pt-br ;
-                                                         rdfs:label "Nascido com asfixia"@pt-br .
-
-
-###  http://200.19.182.252/ontology#NascidoComAsfixiaGrave
-<http://200.19.182.252/ontology#NascidoComAsfixiaGrave> rdf:type owl:Class ;
-                                                         rdfs:subClassOf <http://200.19.182.252/ontology#NascidoComAsfixia> ;
-                                                         rdfs:comment "Apgar 0 a 2"@pt-br ;
-                                                         rdfs:label "Nascido com asfixia grave"@pt-br .
-
-
-###  http://200.19.182.252/ontology#NascidoComAsfixiaLeve
-<http://200.19.182.252/ontology#NascidoComAsfixiaLeve> rdf:type owl:Class ;
-                                                         rdfs:subClassOf <http://200.19.182.252/ontology#NascidoComAsfixia> ;
-                                                         rdfs:comment "com asfixia leve (Apgar 5 a 7)"@pt ;
-                                                         rdfs:label "Nascido com asfixia leve"@pt-br .
-
-
-###  http://200.19.182.252/ontology#NascidoComAsfixiaModerado
-<http://200.19.182.252/ontology#NascidoComAsfixiaModerado> rdf:type owl:Class ;
-                                                        rdfs:subClassOf <http://200.19.182.252/ontology#NascidoComAsfixia> ;
-                                                        rdfs:comment "com asfixia moderada (Apgar 3 a 4)"@pt-br ;
-                                                        rdfs:label "Nascido com asfixia moderada"@pt-br .
-
-
-###  Generated by the OWL API (version 4.5.10) https://github.com/owlcs/owlapi
+###  Generated by the OWL API (version 4.2.8.20170104-2310) https://github.com/owlcs/owlapi
