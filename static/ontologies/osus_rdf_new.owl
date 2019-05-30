@@ -14,6 +14,8 @@
 
 ###  http://www.w3.org/2002/07/owl#sameAs
 <http://www.w3.org/2002/07/owl#sameAs> rdf:type owl:ObjectProperty;
+           rdfs:domain <http://200.19.182.252/ontology#Pessoa> ;
+           rdfs:range <http://200.19.182.252/ontology#Pessoa> ;
            rdfs:label "same as"^^xsd:string .
 
 ###  http://200.19.182.252/ontology#causaDaMorte
