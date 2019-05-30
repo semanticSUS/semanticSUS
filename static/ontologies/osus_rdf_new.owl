@@ -12,6 +12,10 @@
 #    Object Properties
 #################################################################
 
+owl:sameAs rdf:type owl:ObjectProperty;
+           rdfs:domain <http://200.19.182.252/ontology#Pessoa> ;
+           rdfs:range <http://200.19.182.252/ontology#Pessoa> ;
+
 ###  http://200.19.182.252/ontology#causaDaMorte
 <http://200.19.182.252/ontology#causaDaMorte> rdf:type owl:ObjectProperty ;
                                               rdfs:domain <http://200.19.182.252/ontology#Obito> ;
