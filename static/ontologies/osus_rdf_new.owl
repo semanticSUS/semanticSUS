@@ -12,10 +12,6 @@
 #    Object Properties
 #################################################################
 
-###  http://www.w3.org/2002/07/owl#sameAs
-<http://www.w3.org/2002/07/owl#sameAs> rdf:type owl:ObjectProperty;
-           rdfs:label "same as"^^xsd:string .
-
 ###  http://200.19.182.252/ontology#causaDaMorte
 <http://200.19.182.252/ontology#causaDaMorte> rdf:type owl:ObjectProperty ;
                                               rdfs:domain <http://200.19.182.252/ontology#Obito> ;
@@ -39,7 +35,7 @@
 
 ###  http://200.19.182.252/ontology#infoNasc
 <http://200.19.182.252/ontology#infoNasc> rdf:type owl:ObjectProperty ;
-                                          rdfs:domain <http://200.19.182.252/ontology#RN> ;
+                                          rdfs:domain <http://200.19.182.252/ontology#Pessoa> ;
                                           rdfs:range <http://200.19.182.252/ontology#Nascimento> ;
                                           rdfs:label "informações do nascimento"^^xsd:string .
 
@@ -64,6 +60,13 @@
                                         rdfs:range <http://200.19.182.252/ontology#Mae> ;
                                         rdfs:label "tem mãe"^^xsd:string .
 
+
+### http://200.19.182.252/ontology#sameAs
+<http://200.19.182.252/ontology#sameAs> rdf:type owl:ObjectProperty ;
+                                        rdfs:domain <http://200.19.182.252/ontology#Pessoa> ;
+                                        rdfs:range <http://200.19.182.252/ontology#Pessoa> ;
+                                        rdfs:label "same as"^^xsd:string, "mesmo como"^^xsd:string ;
+                                        rdfs:comment "Representa que duas instâncias são as mesmas no vacabuário OSUS"@pt .
 
 #################################################################
 #    Data properties
@@ -144,7 +147,7 @@
 
 ###  http://200.19.182.252/ontology#numDecNascVivo
 <http://200.19.182.252/ontology#numDecNascVivo> rdf:type owl:DatatypeProperty ;
-                                                rdfs:domain <http://200.19.182.252/ontology#RN> ;
+                                                rdfs:domain <http://200.19.182.252/ontology#Pessoa> ;
                                                 rdfs:range xsd:string ;
                                                 rdfs:label "número de nascido vivo"^^xsd:string .
 
@@ -152,7 +155,7 @@
 ###  http://200.19.182.252/ontology#pesoAoNascer
 <http://200.19.182.252/ontology#pesoAoNascer> rdf:type owl:DatatypeProperty ;
                                               rdfs:domain <http://200.19.182.252/ontology#Nascimento> ;
-                                              rdfs:range xsd:float ;
+                                              rdfs:range xsd:double ;
                                               rdfs:label "peso ao nascer"^^xsd:string .
 
 
