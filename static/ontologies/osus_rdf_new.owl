@@ -61,30 +61,13 @@
                                         rdfs:label "tem mãe"^^xsd:string .
 
 
-### http://200.19.182.252/ontology#sameAs
-<http://200.19.182.252/ontology#sameAs> rdf:type owl:ObjectProperty ;
-                                        rdfs:domain <http://200.19.182.252/ontology#Pessoa> ;
-                                        rdfs:range <http://200.19.182.252/ontology#Pessoa> ;
-                                        rdfs:label "same as"^^xsd:string, "mesmo como"^^xsd:string ;
-                                        rdfs:comment "Representa que duas instâncias são as mesmas no vacabuário OSUS"@pt .
-
 
 ### http://200.19.182.252/ontology#sameRN
 <http://200.19.182.252/ontology#sameRN> rdf:type owl:ObjectProperty ;
                                         rdfs:domain <http://200.19.182.252/ontology#PessoaMorta> ;
                                         rdfs:range <http://200.19.182.252/ontology#RN> ;
-                                        rdfs:subPropertyOf <http://200.19.182.252/ontology#sameAs> ;
-                                        rdfs:label "same recém-nascido"^^xsd:string, "mesmo como recém-nascido"^^xsd:string ;
-                                        rdfs:comment "Representa que a pessoa morta é um recém-nascido"@pt .
+                                        rdfs:label "same recém-nascido"^^xsd:string, "mesmo recém-nascido"^^xsd:string.
 
-
-### http://200.19.182.252/ontology#samePessoaMorta
-<http://200.19.182.252/ontology#samePessoaMorta> rdf:type owl:ObjectProperty ;
-                                        rdfs:domain <http://200.19.182.252/ontology#RN> ;
-                                        rdfs:range <http://200.19.182.252/ontology#PessoaMorta> ;
-                                        rdfs:subPropertyOf <http://200.19.182.252/ontology#sameAs> ;
-                                        rdfs:label "same pessoa morta"^^xsd:string, "mesmo como pessoa morta"^^xsd:string ;
-                                        rdfs:comment "Representa que o recém-nascido é uma pessoa morta"@pt .
 
 
 #################################################################
